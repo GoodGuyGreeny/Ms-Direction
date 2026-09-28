@@ -896,7 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuest: {fileID: 0}
   quests:
-  - {fileID: 2504663509596355314, guid: 9d6a478a0bcafc34f8331a7e60707117, type: 3}
+  - {fileID: 1483493898625752824, guid: 9a9173d9111236643bf568f501ee6ffc, type: 3}
   timeBetweenQuestTransition: 3
 --- !u!4 &974302919
 Transform:
@@ -907,7 +907,7 @@ Transform:
   m_GameObject: {fileID: 974302917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4023957, y: 7.8933353, z: 5.2937236}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
