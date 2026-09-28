@@ -6,14 +6,17 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance = null;
 
+    [Tooltip("Setting this does nothing. QuestManager handles all quest setting and transitions. Element 0 of quests will always be the first quest, and it will continue down the array linearly.")]
     public Quest currentQuest = null;
 
     [SerializeField]
+    [Tooltip("The list of quests that can be found in this level, in order.")]
     private Quest[] quests;
     private int currentQuestIndex = 0;
 
     [SerializeField]
-    private float timeBetweenQuestTransition;
+    [Tooltip("The number of seconds that it takes to transition from one quest to the next")]
+    private float timeBetweenQuestTransition = 3;
 
     private void Awake()
     {
@@ -31,7 +34,12 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         if(quests.Length != 0)
+        {
             currentQuest = quests[currentQuestIndex];
+            // This line is only needed in the editor. See the inner functions comment for more details.
+            currentQuest.SetAllTasksToBeIncomplete();
+        }
+        
     }
 
     // Completes the active quest, and begins quest transition
@@ -41,6 +49,7 @@ public class QuestManager : MonoBehaviour
         // Possibly play voice line?
         // All stuff I can't implement just yet!
 
+        Debug.Log("The current quest has been completed!");
         StartCoroutine("StartBufferBetweenQuestTransition");
     }
 
@@ -57,6 +66,8 @@ public class QuestManager : MonoBehaviour
             return;
 
         currentQuest = quests[currentQuestIndex];
+        // This line is only needed in the editor. See the inner functions comment for more details.
+        currentQuest.SetAllTasksToBeIncomplete();
         UpdateQuestDisplay();
     }
 

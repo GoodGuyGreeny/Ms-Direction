@@ -82,6 +82,18 @@ public class QuestData : ScriptableObject
         return completedTasks;
     }
 
+    // Sets all tasks to have a false completion status.
+    // This is mostly only for the editor. Scriptableobjects persist and save
+    // changes ONLY in the UnityEditor. In the actual game, there'd be no need
+    // to ever call this function.
+    public void SetAllTasksToBeIncomplete()
+    {
+        foreach (QuestTask t in tasks)
+        {
+            t.SetCompletionStatus(false);
+        }
+    }
+
     // Returns the QuestTask associated with the id argument.
     // Logs an error and returns null if none can be found.
     private QuestTask GetTaskByID(string id)
