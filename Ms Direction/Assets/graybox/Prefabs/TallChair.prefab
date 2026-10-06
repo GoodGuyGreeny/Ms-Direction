@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3687647304302182826}
   - component: {fileID: 3728125566028232003}
   m_Layer: 0
-  m_Name: Chairs
+  m_Name: TallChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,6 +114,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3451147857856890920}
     m_Modifications:
+    - target: {fileID: 1231268181152209790, guid: 9f1947ef0148e144d83187d3a82d778d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231268181152209790, guid: 9f1947ef0148e144d83187d3a82d778d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2427168835597929690, guid: 9f1947ef0148e144d83187d3a82d778d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -178,6 +188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785143996837781551, guid: 9f1947ef0148e144d83187d3a82d778d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3090834519679751776, guid: 9f1947ef0148e144d83187d3a82d778d,
         type: 3}
