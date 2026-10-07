@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6288098815743374152}
   - component: {fileID: 388231510131975121}
   - component: {fileID: 3245345456636740837}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -151,9 +151,11 @@ GameObject:
   - component: {fileID: 8739421504656194658}
   - component: {fileID: 1459557338523759619}
   - component: {fileID: 2899539517724790941}
-  m_Layer: 0
+  - component: {fileID: 6851241087212973465}
+  - component: {fileID: 6731752333245787346}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,3 +292,36 @@ MonoBehaviour:
   playerCamera: {fileID: 6002980552632768653}
   mouseSensitivity: 2
   maxLookAngle: 85
+--- !u!114 &6851241087212973465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346689141443999445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6c69b44128d3948824ee6b49dbc345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camPos: {fileID: 6002980552632768653}
+  interactDistance: 4
+--- !u!114 &6731752333245787346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346689141443999445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cebd1f619f32848835a5089fb3691c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camPos: {fileID: 6002980552632768653}
+  playerInteractor: {fileID: 6851241087212973465}
+  collisionDetection:
+    serializedVersion: 2
+    m_Bits: 55
+  offset: 2
+  lookSpeed: 3

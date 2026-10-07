@@ -10,7 +10,7 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
-        interactPressed = Input.GetButtonDown("Interact");
+        interactPressed = Input.GetKeyDown(KeyCode.E);
 
         Vector3 rayLocation = camPos.transform.position;
         Debug.DrawLine(camPos.transform.position, camPos.transform.position + camPos.transform.TransformDirection(Vector3.forward) * interactDistance, Color.red);
