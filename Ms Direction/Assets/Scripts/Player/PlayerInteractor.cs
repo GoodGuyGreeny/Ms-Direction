@@ -20,7 +20,7 @@ public class PlayerInteractor : MonoBehaviour
         {
             I_Interactable interactable = hit.collider.gameObject.GetComponent<I_Interactable>();
             if (interactable != null)
-                InteractionWithObject(interactable);
+                InteractionWithObject(interactable, hit.collider.gameObject);
         }
     }
 
@@ -28,7 +28,7 @@ public class PlayerInteractor : MonoBehaviour
     // Broadcasts the description text of the object and calls the objects interacted event.
     //
     // @param interactable Object with I_Interactable interface attached
-    void InteractionWithObject(I_Interactable interactable)
+    void InteractionWithObject(I_Interactable interactable, GameObject obj)
     {
         interactable.BroadcastDescriptionText();
         if (interactPressed && interactAllowed)

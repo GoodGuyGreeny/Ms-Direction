@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    private const int MAX_SLOTS = 8;
+    private const int MAX_SLOTS = 9;
 
     [Tooltip("The index of the current active item in the inventory list")]
     private int activeIndex = 0;
@@ -19,10 +21,20 @@ public class Inventory : MonoBehaviour
     {
         inventoryList = new InventorySlot[MAX_SLOTS];
         recencyList = new InventorySlot[MAX_SLOTS];
+
+        for (int i = 0; i < MAX_SLOTS; i++)
+        {
+            inventoryList[i] = new InventorySlot();
+            Debug.Log("Created slot " + i);
+        }
+
+        inventoryList[MAX_SLOTS - 1].mutable = false;
+
+
     }
 
     // Adds an item into our inventoryList
-    void Add(GameObject obj)
+    public void Add(GameObject obj)
     {
         // HERE: 
         // 1. Get InventoryItem script from the passed object (MOST interactable items should have a prefab
@@ -33,17 +45,56 @@ public class Inventory : MonoBehaviour
         //
         // 2. Put InventoryItem script into InventorySlot container, then place into the end of inventory list,
         // calling Replace() if it is full.
+
+        InventoryItem newItem = obj.GetComponent<InventoryItem>();
+        bool itemAdded = false;
+
+        for (int i = 0; i < MAX_SLOTS - 1; i++)
+        {
+            if (inventoryList[i].item == null)
+            {
+                inventoryList[i].item = newItem;
+                itemAdded = true;
+                Debug.Log("Item [" + newItem.name + "] added to inventory slot " + i);
+                obj.SetActive(false);
+                break;
+            }
+        }
+
+        if (itemAdded == false)
+        {
+            Replace(obj);
+        }
     }
 
     // Removes an item from our inventoryList
     void Remove(GameObject obj = null)
     {
-        if(obj == null)
+        if (obj == null)
         {
             // Remove the currently active item, indicated by activeIndex.
+            if (inventoryList[activeIndex].item != null && inventoryList[activeIndex].mutable == true)
+            {
+                inventoryList[activeIndex].Empty();
+            }
             return;
         }
         // Else, remove the passed item
+        else
+        {
+            // Add code
+            InventoryItem itemToRemove = obj.GetComponent<InventoryItem>();
+
+            for (int i = 0; i < MAX_SLOTS - 1; i++)
+            {
+                if (inventoryList[i].item.itemName == itemToRemove.itemName)
+                {
+                    inventoryList[i].Empty();
+                    break;
+                }
+            }
+            return;
+        }
     }
 
     // Replaces an item within our inventoryList
@@ -53,16 +104,40 @@ public class Inventory : MonoBehaviour
         // Or would it be better that this is just called on the activeItem index
         // and the current activeItem is replaced with the added item?
         // I think the second way is better and more common, but feel free to do either.
+        if (inventoryList[activeIndex].item != null && inventoryList[activeIndex].mutable == true)
+        {
+            InventoryItem newItem = obj.GetComponent<InventoryItem>();
+            inventoryList[activeIndex].item = newItem;
+            Debug.Log("Replaced item at index " + activeIndex);
+        }
+    }
+
+    // Change Active Item
+    // @param i index to set as active
+    void SetActiveItem(int i)
+    {
+        activeIndex = i;
+    }
+
+    // return list of inventory slots
+    InventorySlot[] GetInventorySlotsList()
+    {
+        return inventoryList;
     }
 }
 
 public class InventorySlot
 {
-    bool mutable = true;
-    InventoryItem item;
+    public bool mutable = true;
+    public InventoryItem item;
 
     public void ToggleObject()
     {
         item.gameObject.SetActive(!item.gameObject.activeSelf);
+    }
+
+    public void Empty()
+    {
+        item = null;
     }
 }
