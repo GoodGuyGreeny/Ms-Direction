@@ -7,6 +7,12 @@ public class Quest : MonoBehaviour
     [SerializeField]
     [Tooltip("A Quest Data scriptable object that outlines the information needed for this quest.")]
     private QuestData data;
+    
+    // UI Hookup for UI Manager
+    public string GetCurrentTaskDescription()
+    {
+        return data.GetCurrentTaskDescription();
+    }
 
     // Attempts to complete the task associated with the given ID.
     // Returns true if it succeeds, and false if it fails.

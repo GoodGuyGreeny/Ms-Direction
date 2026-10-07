@@ -8,6 +8,20 @@ public class QuestData : ScriptableObject
     // Array of QuestTasks that outline the steps of the quest
     [SerializeField]
     private QuestTask[] tasks;
+    
+    // Looping through tasks to get UI text
+    public string GetCurrentTaskDescription()
+    {
+        foreach (QuestTask task in tasks)
+        {
+            if (!task.GetCompletionStatus())
+            {
+                return task.descriptionText;
+            }
+        }
+
+        return "";
+    }
 
     // Checks whether the passed task is able to be completed.
     // Tasks are unable to be completed when they require all previous tasks
@@ -100,6 +114,7 @@ public class QuestData : ScriptableObject
     // Logs an error and returns null if none can be found.
     private QuestTask GetTaskByID(string id)
     {
+        
         foreach(QuestTask t in tasks)
         {
             if (id == t.GetID())

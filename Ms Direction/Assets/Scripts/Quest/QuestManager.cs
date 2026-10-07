@@ -40,6 +40,7 @@ public class QuestManager : MonoBehaviour
             currentQuest.SetAllTasksToBeIncomplete();
         }
         
+        UpdateQuestDisplay();
     }
 
     // Completes the active quest, and begins quest transition
@@ -74,9 +75,9 @@ public class QuestManager : MonoBehaviour
     // Calls the UI Manager to update the quest UI
     public void UpdateQuestDisplay()
     {
-        string[] descriptions = currentQuest.GetTaskTextData();
-        bool[] completions = currentQuest.GetTaskCompletionData();
-        // UI Manager needed to finalize implementation
+        string description = currentQuest.GetCurrentTaskDescription();
+
+        QuestUIManager.instance.UpdateQuestUI(description);
     }
 
     // Small buffer between quest completion and quest transition
