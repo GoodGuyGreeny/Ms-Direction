@@ -14,10 +14,12 @@ public class QuestData : ScriptableObject
     // to be completed, and a prerequisite has not been met.
     public bool CanTaskBeCompleted(string id)
     {
-        // DO NOT REFACTOR! I call GetTaskByID because it provides valuable error checking in
-        // the debug log.
         QuestTask task = GetTaskByID(id);
+
         if (task == null)
+            return false;
+
+        if (task.GetCompletionStatus() == true)
             return false;
 
         bool thereBeenAnIncompleteTask = false;
