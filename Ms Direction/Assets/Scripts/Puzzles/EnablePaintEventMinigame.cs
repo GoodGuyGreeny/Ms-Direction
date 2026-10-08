@@ -5,12 +5,12 @@ public class EnablePaintEventMinigame : MonoBehaviour
 {
 
    public GameObject panel;
-   void OnEnable
+   void OnEnable()
    {
       EventManager.instance.on2DEventPopup += EnableThePanel;
    }
 
-   void OnDisable
+   void OnDisable()
    {
       EventManager.instance.on2DEventPopup -= EnableThePanel;
    }
