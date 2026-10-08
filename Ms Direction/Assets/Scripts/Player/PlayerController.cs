@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -22,13 +21,18 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
         playerYaw = transform.eulerAngles.y;
     }
 
     private void Start()
+    {
+        LockCursor();
+    }
+
+    private void OnEnable()
     {
         LockCursor();
     }
@@ -43,7 +47,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
-        rb.MoveRotation(Quaternion.Euler(0f, playerYaw, 0f));
     }
 
     private void HandleInput()
@@ -69,7 +72,8 @@ public class PlayerController : MonoBehaviour
         cameraPitch -= mouseY;
         cameraPitch = Mathf.Clamp(cameraPitch, -maxLookAngle, maxLookAngle);
 
-        playerCamera.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
+        playerCamera.localRotation =
+            Quaternion.Euler(cameraPitch, playerYaw, 0f);
     }
 
     private void HandleMovement()
