@@ -17,6 +17,6 @@ public class EnablePaintEventMinigame : MonoBehaviour
 
    void EnableThePanel()
    {
-      panel.SetActive(true) 
+        panel.SetActive(true);
    }
 }
