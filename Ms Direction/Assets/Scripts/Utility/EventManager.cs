@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager instance;
 
-    public event System.Action onEventPopup;
+    public event System.Action on2DEventPopup;
+    public event System.Action on2DEventClosure;
 
     private void Awake()
     {
@@ -18,14 +19,19 @@ public class EventManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(instance);
         }
-        else
+        else if(instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
-    public void InvokeEventPopup()
+    public void Invoke2DEventPopup()
     {
-        onEventPopup?.Invoke();
+        on2DEventPopup?.Invoke();
+    }
+
+    public void Invoke2DEventClosure()
+    {
+        on2DEventClosure?.Invoke();
     }
 }
