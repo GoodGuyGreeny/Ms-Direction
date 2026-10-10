@@ -33,6 +33,12 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
 
         [TextArea(2, 5)]
         public string responseText;
+        
+        [Header("Quest")]
+        public bool completeQuestTask;
+
+        [Tooltip("Quest task ID to complete when this delivery succeeds.")]
+        public string questTaskID;
     }
 
     [Header("Interaction")]
@@ -102,6 +108,14 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
                     {
                         Debug.LogWarning("InteractableVendor: Replace action selected but no replacement item assigned.");
                     }
+                }
+                
+                if (response.completeQuestTask &&
+                    !string.IsNullOrEmpty(response.questTaskID) &&
+                    QuestManager.instance != null &&
+                    QuestManager.instance.currentQuest != null)
+                {
+                    QuestManager.instance.currentQuest.CompleteTask(response.questTaskID);
                 }
 
                 return;
