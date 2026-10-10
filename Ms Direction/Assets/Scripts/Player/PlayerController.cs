@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour
         LockCursor();
     }
 
+    private void OnEnable()
+    {
+        LockCursor();
+    }
+
     private void Update()
     {
         HandleInput();
