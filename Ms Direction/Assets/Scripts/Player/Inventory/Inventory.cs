@@ -32,6 +32,38 @@ public class Inventory : MonoBehaviour
 
 
     }
+    
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            DebugInventory();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            SetActiveItem(0);
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            SetActiveItem(1);
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            SetActiveItem(2);
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            SetActiveItem(3);
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+            SetActiveItem(4);
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+            SetActiveItem(5);
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+            SetActiveItem(6);
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+            SetActiveItem(7);
+    }
 
     // Adds an item into our inventoryList
     public void Add(GameObject obj)
@@ -68,7 +100,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Removes an item from our inventoryList
-    void Remove(GameObject obj = null)
+    public void Remove(GameObject obj = null)
     {
         if (obj == null)
         {
@@ -98,7 +130,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Replaces an item within our inventoryList
-    void Replace(GameObject obj)
+    public void Replace(GameObject obj)
     {
         // Do we want to use the recency list?
         // Or would it be better that this is just called on the activeItem index
@@ -114,15 +146,49 @@ public class Inventory : MonoBehaviour
 
     // Change Active Item
     // @param i index to set as active
-    void SetActiveItem(int i)
+    public void SetActiveItem(int i)
     {
         activeIndex = i;
     }
+    
+    // return current active item
+    public InventoryItem GetActiveItem()
+    {
+        return inventoryList[activeIndex].item;
+    }
 
     // return list of inventory slots
-    InventorySlot[] GetInventorySlotsList()
+    public InventorySlot[] GetInventorySlotsList()
     {
         return inventoryList;
+    }
+    
+    public void DebugInventory()
+    {
+        Debug.Log("----- INVENTORY -----");
+
+        for (int i = 0; i < inventoryList.Length; i++)
+        {
+            if (inventoryList[i].item == null)
+            {
+                Debug.Log("Slot " + i + ": EMPTY");
+            }
+            else
+            {
+                Debug.Log("Slot " + i + ": " + inventoryList[i].item.itemName);
+            }
+        }
+
+        Debug.Log("Active Slot: " + activeIndex);
+
+        if (inventoryList[activeIndex].item != null)
+        {
+            Debug.Log("Active Item: " + inventoryList[activeIndex].item.itemName);
+        }
+        else
+        {
+            Debug.Log("Active Item: EMPTY");
+        }
     }
 }
 
@@ -140,4 +206,5 @@ public class InventorySlot
     {
         item = null;
     }
+    
 }

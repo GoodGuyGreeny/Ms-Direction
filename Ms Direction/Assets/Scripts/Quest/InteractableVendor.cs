@@ -11,10 +11,21 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
         Wrong
     }
     
+    public enum DeliveryAction
+    {
+        Destroy,
+        Replace
+    }
+    
 
     [System.Serializable]
     public class DeliveryResponse
     {
+        public DeliveryAction action;
+
+        [Tooltip("Only used when Action is Replace.")]
+        public GameObject replacementItem;
+        
         public DeliveryResponseType responseType;
 
         [Tooltip("Only used when Response Type is Item.")]
@@ -27,10 +38,6 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
     [Header("Interaction")]
     [SerializeField] private string localDescriptionText = "Deliver Item";
     public string DescriptionText => localDescriptionText;
-
-    [Header("Testing")]
-    [Tooltip("Temporary fake equipped item until the inventory system is finished.")]
-    [SerializeField] private InventoryItem testEquippedItem;
     
     [Header("Response UI")]
     [SerializeField] private TMP_Text responseText;
@@ -46,10 +53,23 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
 
     public void Interacted(GameObject caller = null)
     {
-        CheckDelivery(testEquippedItem);
+        if (caller == null)
+            return;
+
+        Inventory inventory = caller.GetComponent<Inventory>();
+
+        if (inventory == null)
+        {
+            Debug.LogWarning("InteractableVendor: Caller does not have an Inventory component.");
+            return;
+        }
+
+        InventoryItem equippedItem = inventory.GetActiveItem();
+
+        CheckDelivery(equippedItem, inventory);
     }
 
-    private void CheckDelivery(InventoryItem equippedItem)
+    private void CheckDelivery(InventoryItem equippedItem, Inventory inventory)
     {
         DeliveryResponse wrongResponse = null;
 
@@ -67,6 +87,23 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
             if (equippedItem.itemName == response.requiredItem.itemName)
             {
                 ShowResponse(response.responseText);
+
+                if (response.action == DeliveryAction.Destroy)
+                {
+                    inventory.Remove();
+                }
+                else if (response.action == DeliveryAction.Replace)
+                {
+                    if (response.replacementItem != null)
+                    {
+                        inventory.Replace(response.replacementItem);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("InteractableVendor: Replace action selected but no replacement item assigned.");
+                    }
+                }
+
                 return;
             }
         }
