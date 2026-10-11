@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574c2f64be3863946a607cb4789a8c66, type: 3}
+  m_Name: Quest_Floor1
+  m_EditorClassIdentifier: 
+  tasks:
+  - descriptionText: Paint a Green Folder
+    id: Tut_Paint
+    completePrevious: 0
+  - descriptionText: Deliver a Yellow Folder
+    id: 1_Yellow
+    completePrevious: 1
+  - descriptionText: Copy a Report
+    id: 1_Report
+    completePrevious: 1
+  - descriptionText: Dispose of a Compromising Document
+    id: 1_Fraud
+    completePrevious: 1
