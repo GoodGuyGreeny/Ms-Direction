@@ -24,7 +24,6 @@ public class PaintColliderGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.instance.Invoke2DEventPopup();
         if(shapeCollider == null)
         {
             if(GetComponent<PolygonCollider2D>() != null)
@@ -72,6 +71,15 @@ public class PaintColliderGrid : MonoBehaviour
     {
         collideCount++;
         if (collideCount == cellCount)
+        {
+            Close();
             Debug.Log("Drawing was covered!");
+        }
+    }
+
+    public void Close()
+    {
+        Cursor.visible = false;
+        EventManager.instance.Invoke2DEventClosure();
     }
 }

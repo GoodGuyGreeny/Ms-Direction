@@ -15,13 +15,13 @@ public class PlayerDisabler : MonoBehaviour
     private MonoBehaviour[] scriptsToDisable;
     void OnEnable()
     {
-        EventManager.instance.on2DEventPopup += DisableScripts;
+        EventManager.instance.on2DEventPopup += _ => DisableScripts();
         EventManager.instance.on2DEventClosure += EnableScripts;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.on2DEventPopup -= DisableScripts;
+        EventManager.instance.on2DEventPopup -= _ => DisableScripts();
         EventManager.instance.on2DEventClosure -= EnableScripts;
     }
 
