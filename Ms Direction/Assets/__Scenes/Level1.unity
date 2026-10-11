@@ -1625,6 +1625,7 @@ GameObject:
   - component: {fileID: 168024191}
   - component: {fileID: 168024190}
   - component: {fileID: 168024189}
+  - component: {fileID: 168024192}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -1718,6 +1719,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168024187}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &168024192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168024187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &173116584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3685,6 +3704,7 @@ GameObject:
   - component: {fileID: 308034929}
   - component: {fileID: 308034928}
   - component: {fileID: 308034927}
+  - component: {fileID: 308034930}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -3778,6 +3798,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308034925}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &308034930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308034925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &317661099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3926,6 +3964,7 @@ GameObject:
   - component: {fileID: 328201748}
   - component: {fileID: 328201747}
   - component: {fileID: 328201746}
+  - component: {fileID: 328201749}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -4019,6 +4058,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328201744}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &328201749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328201744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &335975842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5260,6 +5317,7 @@ GameObject:
   - component: {fileID: 442549878}
   - component: {fileID: 442549877}
   - component: {fileID: 442549876}
+  - component: {fileID: 442549879}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -5353,6 +5411,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442549874}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &442549879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442549874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &445301366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5578,6 +5654,7 @@ GameObject:
   - component: {fileID: 462724307}
   - component: {fileID: 462724306}
   - component: {fileID: 462724305}
+  - component: {fileID: 462724308}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -5671,6 +5748,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462724303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &462724308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462724303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!4 &473593906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3451147857856890920, guid: 32beb27516cb702438a104d2314d20de,
@@ -8629,6 +8724,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675074435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &680792198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 729421044}
+    m_Modifications:
+    - target: {fileID: 2337946562394253824, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: QuestManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520150572482947282, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: questText
+      value: 
+      objectReference: {fileID: 1458963210}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.1346273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3475612
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.9143896
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65cf67e1613abf447bcac36947d97c2d, type: 3}
+--- !u!4 &680792199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 680792198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682011298
 GameObject:
   m_ObjectHideFlags: 0
@@ -9099,6 +9273,7 @@ GameObject:
   - component: {fileID: 716234871}
   - component: {fileID: 716234870}
   - component: {fileID: 716234869}
+  - component: {fileID: 716234872}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -9192,6 +9367,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716234867}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &716234872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716234867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &719097457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9260,6 +9453,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32beb27516cb702438a104d2314d20de, type: 3}
+--- !u!1 &729421043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729421044}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729421044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729421043}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.494858, y: 2.8469543, z: -34.731174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 680792199}
+  - {fileID: 1346231366}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &735098411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3451147857856890920, guid: 32beb27516cb702438a104d2314d20de,
@@ -12078,6 +12304,7 @@ GameObject:
   - component: {fileID: 936142787}
   - component: {fileID: 936142786}
   - component: {fileID: 936142785}
+  - component: {fileID: 936142788}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -12171,6 +12398,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936142783}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &936142788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936142783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &937323153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15707,6 +15952,7 @@ GameObject:
   - component: {fileID: 1214705712}
   - component: {fileID: 1214705711}
   - component: {fileID: 1214705710}
+  - component: {fileID: 1214705713}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -15800,6 +16046,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214705708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1214705713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214705708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1220197039
 GameObject:
   m_ObjectHideFlags: 0
@@ -15812,6 +16076,7 @@ GameObject:
   - component: {fileID: 1220197043}
   - component: {fileID: 1220197042}
   - component: {fileID: 1220197041}
+  - component: {fileID: 1220197044}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -15905,6 +16170,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220197039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1220197044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220197039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &1221845682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16246,7 +16529,7 @@ GameObject:
   - component: {fileID: 1229964104}
   - component: {fileID: 1229964103}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Quest Test Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16328,7 +16611,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1458963209}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1346231366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17835,6 +18118,7 @@ GameObject:
   - component: {fileID: 1332796198}
   - component: {fileID: 1332796197}
   - component: {fileID: 1332796196}
+  - component: {fileID: 1332796199}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -17928,6 +18212,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332796194}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1332796199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332796194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1336742547
 GameObject:
   m_ObjectHideFlags: 0
@@ -17990,6 +18292,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1912171442}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1346231365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346231366}
+  m_Layer: 0
+  m_Name: Canvases
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346231366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346231365}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1229964106}
+  m_Father: {fileID: 729421044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350020240
 GameObject:
   m_ObjectHideFlags: 0
@@ -18175,6 +18509,7 @@ GameObject:
   - component: {fileID: 1356230310}
   - component: {fileID: 1356230309}
   - component: {fileID: 1356230308}
+  - component: {fileID: 1356230311}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -18268,6 +18603,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356230306}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1356230311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356230306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!4 &1357362889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3451147857856890920, guid: 32beb27516cb702438a104d2314d20de,
@@ -18391,6 +18744,7 @@ GameObject:
   - component: {fileID: 1369696786}
   - component: {fileID: 1369696785}
   - component: {fileID: 1369696784}
+  - component: {fileID: 1369696787}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -18484,6 +18838,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369696782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1369696787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369696782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &1374375060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18576,6 +18948,7 @@ GameObject:
   - component: {fileID: 1386123163}
   - component: {fileID: 1386123162}
   - component: {fileID: 1386123161}
+  - component: {fileID: 1386123164}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -18669,6 +19042,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386123159}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1386123164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386123159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1393751251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19794,7 +20185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442, y: 32}
+  m_AnchoredPosition: {x: -404.1, y: 32}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458963210
@@ -19880,7 +20271,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -63.62491, w: 0}
+  m_margin: {x: 0, y: 0, z: -127.25726, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20351,6 +20742,7 @@ GameObject:
   - component: {fileID: 1495881311}
   - component: {fileID: 1495881310}
   - component: {fileID: 1495881309}
+  - component: {fileID: 1495881312}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -20444,6 +20836,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495881307}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1495881312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495881307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1496778532
 GameObject:
   m_ObjectHideFlags: 0
@@ -20561,6 +20971,7 @@ GameObject:
   - component: {fileID: 1497555485}
   - component: {fileID: 1497555484}
   - component: {fileID: 1497555483}
+  - component: {fileID: 1497555486}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -20654,6 +21065,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497555481}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1497555486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497555481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1509391123
 GameObject:
   m_ObjectHideFlags: 0
@@ -23629,6 +24058,7 @@ GameObject:
   - component: {fileID: 1752915939}
   - component: {fileID: 1752915938}
   - component: {fileID: 1752915937}
+  - component: {fileID: 1752915940}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -23722,6 +24152,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752915935}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1752915940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752915935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1 &1763368347
 GameObject:
   m_ObjectHideFlags: 0
@@ -25010,6 +25458,7 @@ GameObject:
   - component: {fileID: 1843312858}
   - component: {fileID: 1843312857}
   - component: {fileID: 1843312856}
+  - component: {fileID: 1843312859}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -25103,6 +25552,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843312854}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1843312859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843312854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &1853136173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25417,6 +25884,7 @@ GameObject:
   - component: {fileID: 1880629253}
   - component: {fileID: 1880629252}
   - component: {fileID: 1880629251}
+  - component: {fileID: 1880629254}
   m_Layer: 0
   m_Name: Door Mesh
   m_TagString: Untagged
@@ -25510,6 +25978,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880629249}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1880629254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880629249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Open Door
+  pivotSide: 0
+  openOutward: 1
+  openAtSpawn: 0
+  openAngle: 90
+  openSpeed: 3
 --- !u!1001 &1889422028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30484,15 +30970,15 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519507959}
-  - {fileID: 2085523512}
+  - {fileID: 729421044}
   - {fileID: 1582025195}
   - {fileID: 1336742548}
   - {fileID: 690334461}
   - {fileID: 516362130}
   - {fileID: 1784594200}
   - {fileID: 377320231}
-  - {fileID: 1229964106}
   - {fileID: 852970675}
   - {fileID: 401990867588939424}
   - {fileID: 4238738599407805542}
+  - {fileID: 519507959}
+  - {fileID: 2085523512}
