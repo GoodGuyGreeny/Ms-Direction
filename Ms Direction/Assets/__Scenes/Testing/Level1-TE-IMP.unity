@@ -1342,52 +1342,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1b87791132ef7c43b8e9027a254cb66, type: 3}
---- !u!1 &164206252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 164206254}
-  - component: {fileID: 164206253}
-  m_Layer: 0
-  m_Name: Pizza
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &164206253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164206252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a53a0fbb62834b800d98c5808c18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: pizza
---- !u!4 &164206254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164206252}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.257295, y: -5.6974363, z: -45.80597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168024187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,10 +1787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 188453733}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &188453735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3396,8 +3346,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3828,10 +3778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 411554076}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &411554078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4537,9 +4483,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1451287359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -457, y: 76}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 159, y: -72}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460710617
@@ -4589,8 +4535,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4688,10 +4634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 461303314}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &461303316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5930,10 +5872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 588821416}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &588821418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6223,10 +6161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 619308885}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &619308887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7050,52 +6984,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708167257}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &708381244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708381246}
-  - component: {fileID: 708381245}
-  m_Layer: 0
-  m_Name: Red Folder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &708381245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708381244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a53a0fbb62834b800d98c5808c18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: Red Folder
---- !u!4 &708381246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708381244}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.257295, y: -5.6974363, z: -45.80597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &710126043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7867,52 +7755,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32beb27516cb702438a104d2314d20de, type: 3}
---- !u!1 &752337948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 752337950}
-  - component: {fileID: 752337949}
-  m_Layer: 0
-  m_Name: Whatever
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &752337949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752337948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a53a0fbb62834b800d98c5808c18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: whatever
---- !u!4 &752337950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752337948}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.257295, y: -5.6974363, z: -45.80597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &770475399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3451147857856890920, guid: 32beb27516cb702438a104d2314d20de,
@@ -9253,10 +9095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 902509834}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &902509836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9614,10 +9452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 916718083}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &916718085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11868,10 +11702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1103293184}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1103293186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12443,10 +12273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1144957289}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1144957291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14357,12 +14183,12 @@ PrefabInstance:
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].questTaskID
-      value: 1_Yellow
+      value: Tut_Paint
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
@@ -14371,35 +14197,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
+      propertyPath: responses.Array.data[2].questTaskID
+      value: 1_Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
       propertyPath: responses.Array.data[0].requiredItem
       value: 
-      objectReference: {fileID: 1354933168025730898, guid: 7b74e44dbf982d64b98c5092c9341595,
+      objectReference: {fileID: 8074147585455571930, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].responseText
-      value: Awesome!
+      value: Wow! A green Folder!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[0].responseType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[1].requiredItem
       value: 
-      objectReference: {fileID: 473580370}
+      objectReference: {fileID: 1354933168025730898, guid: 7b74e44dbf982d64b98c5092c9341595,
+        type: 3}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[1].responseText
+      value: Awesome!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[2].requiredItem
+      value: 
+      objectReference: {fileID: 473580370}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[2].responseText
       value: Are you sure this is Yellow?
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
-      propertyPath: responses.Array.data[2].responseText
+      propertyPath: responses.Array.data[2].responseType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[3].responseText
       value: I need a Yellow Folder!
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
-      propertyPath: responses.Array.data[2].responseType
+      propertyPath: responses.Array.data[3].responseType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[0].replacementItem
+      value: 
+      objectReference: {fileID: 1887102637}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].completeQuestTask
@@ -14408,6 +14265,11 @@ PrefabInstance:
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[1].completeQuestTask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
+        type: 3}
+      propertyPath: responses.Array.data[2].completeQuestTask
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4657724014788508097, guid: 402ab2876429bc04283c5cd25d07b315,
@@ -16782,10 +16644,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -18645,10 +18507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1542385285}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1542385287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18790,10 +18648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1547722455}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1547722457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20201,10 +20055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1678571507}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1678571509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22242,52 +22092,6 @@ MonoBehaviour:
   openAtSpawn: 0
   openAngle: 90
   openSpeed: 3
---- !u!1 &1850626607
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1850626609}
-  - component: {fileID: 1850626608}
-  m_Layer: 0
-  m_Name: Yellow Folder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1850626608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850626607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a53a0fbb62834b800d98c5808c18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: Yellow Folder
---- !u!4 &1850626609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850626607}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.257295, y: -5.6974363, z: -45.80597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1858101193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22405,10 +22209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1861116409}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1861116411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22748,10 +22548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1890327471}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1890327473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23596,10 +23392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1949795287}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1949795289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25347,10 +25139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 2119824577}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &2119824579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26196,10 +25984,6 @@ SceneRoots:
   - {fileID: 1451287359}
   - {fileID: 173935568}
   - {fileID: 1836766453}
-  - {fileID: 708381246}
-  - {fileID: 1850626609}
-  - {fileID: 164206254}
-  - {fileID: 752337950}
   - {fileID: 896635269}
   - {fileID: 1042474975}
   - {fileID: 1301082200}
