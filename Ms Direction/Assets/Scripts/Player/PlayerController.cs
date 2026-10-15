@@ -94,16 +94,12 @@ public class PlayerController : MonoBehaviour
 
     private void HandleCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        if (Time.timeScale == 0f)
+            return;
 
         if (Input.GetMouseButtonDown(0))
             LockCursor();
     }
-
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
