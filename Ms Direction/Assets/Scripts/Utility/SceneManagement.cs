@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement instance = null;
+    [Tooltip("")]
+    public AudioSource currentSong;
+    [SerializeField] 
+    private AudioSource[] music;
 
     private void Awake()
     {

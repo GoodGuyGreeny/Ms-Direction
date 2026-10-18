@@ -7,5 +7,5 @@ public class ItemBroadcastUI : MonoBehaviour
 {
     [SerializeField]
     private TextMeshPro itemText;
-    private bool toggleDisplayOn = false;
+    private bool toggleDisplayOn;
 }
