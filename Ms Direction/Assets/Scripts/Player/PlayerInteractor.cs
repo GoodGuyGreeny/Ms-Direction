@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInteractor : MonoBehaviour
 {
     public Transform camPos;
     public float interactDistance;
+    public TextMeshProUGUI uiText;
     bool interactPressed = false, interactAllowed = true;
 
     void Update()
@@ -21,6 +23,8 @@ public class PlayerInteractor : MonoBehaviour
             I_Interactable interactable = hit.collider.gameObject.GetComponent<I_Interactable>();
             if (interactable != null)
                 InteractionWithObject(interactable, hit.collider.gameObject);
+            else if (uiText != null)
+                uiText.text = "";
         }
     }
 
@@ -30,7 +34,8 @@ public class PlayerInteractor : MonoBehaviour
     // @param interactable Object with I_Interactable interface attached
     void InteractionWithObject(I_Interactable interactable, GameObject obj)
     {
-        interactable.BroadcastDescriptionText();
+        if(uiText != null)
+            uiText.text = interactable.DescriptionText;
         if (interactPressed && interactAllowed)
         {
             interactable.Interacted(this.gameObject);
