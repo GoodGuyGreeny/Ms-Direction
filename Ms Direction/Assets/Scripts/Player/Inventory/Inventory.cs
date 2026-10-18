@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 
     [Tooltip("The index of the current active item in the inventory list")]
     private int activeIndex = 0;
+    public int ActiveIndex => activeIndex;
     // The actual listing of items within our inventory
     private InventorySlot[] inventoryList;
     // An updated list of the most recently accessed/used items in our inventory

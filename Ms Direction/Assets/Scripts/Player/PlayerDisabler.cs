@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,7 @@ public class PlayerDisabler : MonoBehaviour
         EventManager.instance.on2DEventClosure -= EnableScripts;
     }
 
-    // Named handler ensures event unsubscription works.
+    // Named handler to ensure event unsubscription finds the exact method.
     private void Handle2DEventPopup(GameObject popup)
     {
         DisableScripts();
