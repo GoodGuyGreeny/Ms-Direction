@@ -26,7 +26,7 @@ public class Pickup : MonoBehaviour, I_Interactable
 
     public void BroadcastDescriptionText()
     {
-
+        
     }
 
 }
