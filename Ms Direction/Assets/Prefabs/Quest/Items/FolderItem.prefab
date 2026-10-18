@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2045307502831134543}
   - component: {fileID: 6319832053579568597}
   - component: {fileID: 6841912726842004846}
-  - component: {fileID: 8074147585455571930}
   m_Layer: 0
   m_Name: FolderItem
   m_TagString: Untagged
@@ -113,21 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 8074147585455571930}
---- !u!114 &8074147585455571930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3102189425928445057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: Folder
+  inventoryItem: {fileID: 354301976908528101, guid: 50aed956e68d6264c95977a7645f1fcb,
+    type: 3}
 --- !u!1001 &776148662399681418
 PrefabInstance:
   m_ObjectHideFlags: 0

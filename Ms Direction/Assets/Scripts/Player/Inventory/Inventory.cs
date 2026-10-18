@@ -78,7 +78,7 @@ public class Inventory : MonoBehaviour
         // 2. Put InventoryItem script into InventorySlot container, then place into the end of inventory list,
         // calling Replace() if it is full.
 
-        InventoryItem newItem = obj.GetComponent<InventoryItem>();
+        I_InventoryItem newItem = obj.GetComponent<I_InventoryItem>();
         bool itemAdded = false;
 
         for (int i = 0; i < MAX_SLOTS - 1; i++)
@@ -87,8 +87,7 @@ public class Inventory : MonoBehaviour
             {
                 inventoryList[i].item = newItem;
                 itemAdded = true;
-                Debug.Log("Item [" + newItem.name + "] added to inventory slot " + i);
-                obj.SetActive(false);
+                Debug.Log("Item [" + newItem.ItemName + "] added to inventory slot " + i);
                 break;
             }
         }
@@ -115,11 +114,11 @@ public class Inventory : MonoBehaviour
         else
         {
             // Add code
-            InventoryItem itemToRemove = obj.GetComponent<InventoryItem>();
+            I_InventoryItem itemToRemove = obj.GetComponent<I_InventoryItem>();
 
             for (int i = 0; i < MAX_SLOTS - 1; i++)
             {
-                if (inventoryList[i].item.itemName == itemToRemove.itemName)
+                if (inventoryList[i].item.ItemName == itemToRemove.ItemName)
                 {
                     inventoryList[i].Empty();
                     break;
@@ -138,7 +137,7 @@ public class Inventory : MonoBehaviour
         // I think the second way is better and more common, but feel free to do either.
         if (inventoryList[activeIndex].item != null && inventoryList[activeIndex].mutable == true)
         {
-            InventoryItem newItem = obj.GetComponent<InventoryItem>();
+            I_InventoryItem newItem = obj.GetComponent<I_InventoryItem>();
             inventoryList[activeIndex].item = newItem;
             Debug.Log("Replaced item at index " + activeIndex);
         }
@@ -152,7 +151,7 @@ public class Inventory : MonoBehaviour
     }
     
     // return current active item
-    public InventoryItem GetActiveItem()
+    public I_InventoryItem GetActiveItem()
     {
         return inventoryList[activeIndex].item;
     }
@@ -175,7 +174,7 @@ public class Inventory : MonoBehaviour
             }
             else
             {
-                Debug.Log("Slot " + i + ": " + inventoryList[i].item.itemName);
+                Debug.Log("Slot " + i + ": " + inventoryList[i].item.ItemName);
             }
         }
 
@@ -183,7 +182,7 @@ public class Inventory : MonoBehaviour
 
         if (inventoryList[activeIndex].item != null)
         {
-            Debug.Log("Active Item: " + inventoryList[activeIndex].item.itemName);
+            Debug.Log("Active Item: " + inventoryList[activeIndex].item.ItemName);
         }
         else
         {
@@ -195,12 +194,7 @@ public class Inventory : MonoBehaviour
 public class InventorySlot
 {
     public bool mutable = true;
-    public InventoryItem item;
-
-    public void ToggleObject()
-    {
-        item.gameObject.SetActive(!item.gameObject.activeSelf);
-    }
+    public I_InventoryItem item;
 
     public void Empty()
     {

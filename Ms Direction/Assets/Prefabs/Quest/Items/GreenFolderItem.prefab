@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7226609126960281469}
   - component: {fileID: 498730040998717114}
   - component: {fileID: 4674759774456084865}
-  - component: {fileID: 7983807342038559663}
   m_Layer: 0
   m_Name: GreenFolderItem
   m_TagString: Untagged
@@ -69,21 +68,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 7983807342038559663}
---- !u!114 &7983807342038559663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5392897416971572383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: 
+  inventoryItem: {fileID: 354301976908528101, guid: 8e6c68ead9f733c4caebaa3216d4719e,
+    type: 3}
 --- !u!1001 &4008669276441429653
 PrefabInstance:
   m_ObjectHideFlags: 0

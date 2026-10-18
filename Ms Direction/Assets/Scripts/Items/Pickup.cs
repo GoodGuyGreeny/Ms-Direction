@@ -10,7 +10,7 @@ public class Pickup : MonoBehaviour, I_Interactable
     public string DescriptionText { get { return localDescriptionText; } }
 
     [SerializeField]
-    private InventoryItem someKindOfItem;
+    private GameObject inventoryItem;
 
     public void Interacted(GameObject caller = null)
     {
@@ -18,7 +18,8 @@ public class Pickup : MonoBehaviour, I_Interactable
         if (possibleInv != null)
         {
             Debug.Log("In this");
-            possibleInv.Add(this.gameObject);
+            possibleInv.Add(inventoryItem);
+            this.gameObject.SetActive(false);
         }
         
     }

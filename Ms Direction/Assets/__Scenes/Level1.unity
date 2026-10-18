@@ -4617,7 +4617,6 @@ MonoBehaviour:
   - action: 0
     replacementItem: {fileID: 0}
     responseType: 0
-    requiredItem: {fileID: 0}
     responseText: 
     completeQuestTask: 0
     questTaskID: 
@@ -10816,10 +10815,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 783423798}
-    - targetCorrespondingSourceObject: {fileID: 6694046014038563834, guid: e352bbe10ee1907458cc00228b2be4ea,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 783423797}
   m_SourcePrefab: {fileID: 100100000, guid: e352bbe10ee1907458cc00228b2be4ea, type: 3}
 --- !u!1 &783423796 stripped
 GameObject:
@@ -10827,20 +10822,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 783423795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &783423797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783423796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ef3a171833b74459a655eac798bc6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: 
 --- !u!114 &783423798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10854,7 +10835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 0}
+  inventoryItem: {fileID: 354301976908528101, guid: 3aca1a4859716e34aaea9e5f8eb08c32,
+    type: 3}
 --- !u!64 &783423799
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18030,6 +18012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mug
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
+        type: 3}
+      propertyPath: localDescriptionText
+      value: You gaze upon the mug.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

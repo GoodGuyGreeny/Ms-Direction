@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6154881498595899590}
   - component: {fileID: 4707479690908853663}
   - component: {fileID: 7698809644703319936}
-  - component: {fileID: 1354933168025730898}
   m_Layer: 0
   m_Name: YellowFolderItemPlaceholder
   m_TagString: Untagged
@@ -69,21 +68,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 1354933168025730898}
---- !u!114 &1354933168025730898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7712576806873777247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: 
+  inventoryItem: {fileID: 354301976908528101, guid: a954098a94cb9814f85c0625c62f2a74,
+    type: 3}
 --- !u!1001 &7568411753823098853
 PrefabInstance:
   m_ObjectHideFlags: 0

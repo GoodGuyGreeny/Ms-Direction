@@ -1,8 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TestInventoryItem : InventoryItem
+public class TestInventoryItem : MonoBehaviour, I_InventoryItem
 {
-    public override void Interact(Inventory inventory)
+    [SerializeField]
+    private Image icon;
+    [SerializeField]
+    private string itemName;
+    public Image Icon { get { return icon; } }
+    public string ItemName { get { return itemName; } }
+    public void Interact(Inventory inventory)
     {
         Debug.Log("Test item used: " + itemName);
     }

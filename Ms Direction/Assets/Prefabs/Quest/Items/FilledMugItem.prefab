@@ -15,14 +15,13 @@ GameObject:
   - component: {fileID: 3874495377675429642}
   - component: {fileID: 7697010865759907401}
   - component: {fileID: 535428262484105786}
-  - component: {fileID: 2023443019189227993}
   m_Layer: 0
   m_Name: FilledMugItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8781892640922914313
 Transform:
   m_ObjectHideFlags: 0
@@ -74,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 0}
+  inventoryItem: {fileID: 0}
 --- !u!114 &6071991101093669746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,21 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 6071991101093669746}
---- !u!114 &2023443019189227993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988584757907409762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ef3a171833b74459a655eac798bc6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: Mug
+  inventoryItem: {fileID: 354301976908528101, guid: 3aca1a4859716e34aaea9e5f8eb08c32,
+    type: 3}
 --- !u!1001 &5509698173305768132
 PrefabInstance:
   m_ObjectHideFlags: 0

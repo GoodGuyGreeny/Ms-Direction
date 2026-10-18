@@ -29,7 +29,10 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
         public DeliveryResponseType responseType;
 
         [Tooltip("Only used when Response Type is Item.")]
-        public InventoryItem requiredItem;
+        public GameObject requiredItemObject;
+
+        // This will not appear in the inspector.
+        public I_InventoryItem requiredItem;
 
         [TextArea(2, 5)]
         public string responseText;
@@ -70,12 +73,12 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
             return;
         }
 
-        InventoryItem equippedItem = inventory.GetActiveItem();
+        I_InventoryItem equippedItem = inventory.GetActiveItem();
 
         CheckDelivery(equippedItem, inventory);
     }
 
-    private void CheckDelivery(InventoryItem equippedItem, Inventory inventory)
+    private void CheckDelivery(I_InventoryItem equippedItem, Inventory inventory)
     {
         DeliveryResponse wrongResponse = null;
 
@@ -87,10 +90,17 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
                 continue;
             }
 
-            if (equippedItem == null || response.requiredItem == null)
+            if (equippedItem == null || response.requiredItemObject == null)
                 continue;
 
-            if (equippedItem.itemName == response.requiredItem.itemName)
+            response.requiredItem = response.requiredItemObject.GetComponent<I_InventoryItem>();
+            if(response.requiredItem == null)
+            {
+                Debug.LogError("ERROR in InteractableVender.cs: Given requiredItemObject does not have an I_InventoryItem component!");
+                continue;
+            }
+
+            if (equippedItem.ItemName == response.requiredItem.ItemName)
             {
                 ShowResponse(response.responseText);
 

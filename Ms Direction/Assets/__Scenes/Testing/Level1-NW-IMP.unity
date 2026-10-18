@@ -917,20 +917,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1200337208}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &80805145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80805144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: Folder
 --- !u!114 &80805146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: 
-  someKindOfItem: {fileID: 80805145}
+  inventoryItem: {fileID: 354301976908528101, guid: 50aed956e68d6264c95977a7645f1fcb,
+    type: 3}
 --- !u!64 &80805147
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2158,10 +2145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 188453733}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &188453735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4555,10 +4538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 411554076}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &411554078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5509,10 +5488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 461303314}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &461303316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7381,10 +7356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 588821416}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &588821418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7916,10 +7887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 619308885}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &619308887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10035,24 +10002,12 @@ PrefabInstance:
         type: 3}
       propertyPath: someKindOfItem
       value: 
-      objectReference: {fileID: 783423797}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e352bbe10ee1907458cc00228b2be4ea, type: 3}
---- !u!114 &783423797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4807561350329594056, guid: e352bbe10ee1907458cc00228b2be4ea,
-    type: 3}
-  m_PrefabInstance: {fileID: 783423795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ef3a171833b74459a655eac798bc6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &785064477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11486,10 +11441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 902509834}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &902509836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11847,10 +11798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 916718083}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &916718085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14612,10 +14559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1103293184}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1103293186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15271,10 +15214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1144957289}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1144957291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15699,10 +15638,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 80805146}
-    - targetCorrespondingSourceObject: {fileID: 7019256085924417799, guid: e92ef3bac7cc5754a9903632d3c0f33d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 80805145}
   m_SourcePrefab: {fileID: 100100000, guid: e92ef3bac7cc5754a9903632d3c0f33d, type: 3}
 --- !u!1001 &1204415206
 PrefabInstance:
@@ -21830,10 +21765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1542385285}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1542385287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21975,10 +21906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1547722455}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1547722457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23528,10 +23455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1678571507}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1678571509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24259,10 +24182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1772366207}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1772366209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25513,10 +25432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1861116409}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1861116411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25852,10 +25767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1890327471}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1890327473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26566,10 +26477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1949795287}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1949795289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28324,10 +28231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 2089011987}
-  openAngle: 90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &2089011989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29109,10 +29012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 2119824577}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &2119824579
 BoxCollider:
   m_ObjectHideFlags: 0

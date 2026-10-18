@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class FolderItem : InventoryItem
+public class FolderItem : MonoBehaviour, I_InventoryItem
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Image icon;
+    [SerializeField]
+    private string itemName;
+    public Image Icon { get { return icon; } }
+    public string ItemName { get { return itemName; } }
 
-    public override void Interact(Inventory inventory)
+    public void Interact(Inventory inventory)
     {
 
     }
