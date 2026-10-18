@@ -128,6 +128,9 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
                     QuestManager.instance.currentQuest.CompleteTask(response.questTaskID);
                 }
 
+                if (this.gameObject.GetComponent<PopupSpawner>() != null)
+                    this.gameObject.GetComponent<PopupSpawner>().SpawnPopup();
+
                 return;
             }
         }
