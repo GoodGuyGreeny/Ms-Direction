@@ -2079,10 +2079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 188453733}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &188453735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4300,13 +4296,30 @@ MonoBehaviour:
   displayDuration: 2
   fadeDuration: 1
   responses:
-  - action: 0
+  - responseType: 0
+    requiredItemObject: {fileID: 354301976908528101, guid: 3aca1a4859716e34aaea9e5f8eb08c32,
+      type: 3}
+    responseText: Fixed!!
+    action: 2
     replacementItem: {fileID: 0}
-    responseType: 0
-    requiredItemObject: {fileID: 0}
-    responseText: 
     completeQuestTask: 0
     questTaskID: 
+    onSuccess:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1336742547}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: BroadcastMessage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Fixed
+            m_BoolArgument: 0
+          m_CallState: 2
+    onlyOnce: 0
 --- !u!136 &377320228
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4573,10 +4586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 411554076}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &411554078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5546,10 +5555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 461303314}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &461303316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7437,10 +7442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 588821416}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &588821418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7972,10 +7973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 619308885}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &619308887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11670,10 +11667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 902509834}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &902509836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12031,10 +12024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 916718083}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &916718085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14783,10 +14772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1103293184}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1103293186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15442,10 +15427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1144957289}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1144957291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22100,10 +22081,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1542385285}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1542385287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22245,10 +22222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1547722455}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1547722457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23798,10 +23771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1678571507}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1678571509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24548,10 +24517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1772366207}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1772366209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25821,10 +25786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1861116409}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1861116411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26179,10 +26140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1890327471}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1890327473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26893,10 +26850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 1949795287}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &1949795289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28651,10 +28604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 2089011987}
-  openAngle: 90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &2089011989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28747,6 +28696,129 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089011986}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2089279335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089279340}
+  - component: {fileID: 2089279339}
+  - component: {fileID: 2089279338}
+  - component: {fileID: 2089279337}
+  - component: {fileID: 2089279336}
+  m_Layer: 0
+  m_Name: Dispenser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2089279336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089279335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f952388f37ef06746ae350aab2d085a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Take Mug
+  itemPrefab: {fileID: 354301976908528101, guid: 3aca1a4859716e34aaea9e5f8eb08c32,
+    type: 3}
+--- !u!136 &2089279337
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089279335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2089279338
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089279335}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2089279339
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089279335}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2089279340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089279335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.66, y: 2.01, z: -29.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095157700
 GameObject:
   m_ObjectHideFlags: 0
@@ -29436,10 +29508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bda6ff16b31144814f85e0cd63bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPivot: {fileID: 2119824577}
-  openAngle: -90
-  openSpeed: 3
-  interactKey: 101
 --- !u!65 &2119824579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31027,3 +31095,4 @@ SceneRoots:
   - {fileID: 4238738599407805542}
   - {fileID: 519507959}
   - {fileID: 2085523512}
+  - {fileID: 2089279340}

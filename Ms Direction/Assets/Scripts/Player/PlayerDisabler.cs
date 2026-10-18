@@ -13,16 +13,23 @@ public class PlayerDisabler : MonoBehaviour
 {
     [SerializeField]
     private MonoBehaviour[] scriptsToDisable;
+
     void OnEnable()
     {
-        EventManager.instance.on2DEventPopup += _ => DisableScripts();
+        EventManager.instance.on2DEventPopup += Handle2DEventPopup;
         EventManager.instance.on2DEventClosure += EnableScripts;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.on2DEventPopup -= _ => DisableScripts();
+        EventManager.instance.on2DEventPopup -= Handle2DEventPopup;
         EventManager.instance.on2DEventClosure -= EnableScripts;
+    }
+
+    // Named handler ensures event unsubscription works.
+    private void Handle2DEventPopup(GameObject popup)
+    {
+        DisableScripts();
     }
 
     void DisableScripts()
@@ -39,5 +46,17 @@ public class PlayerDisabler : MonoBehaviour
         {
             scriptsToDisable[i].enabled = true;
         }
+    }
+
+    // Added for the Reading System.
+    public void DisableForReading()
+    {
+        DisableScripts();
+    }
+
+    // Added for the Reading System.
+    public void EnableAfterReading()
+    {
+        EnableScripts();
     }
 }
