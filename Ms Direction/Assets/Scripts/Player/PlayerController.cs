@@ -12,10 +12,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float maxLookAngle = 85f;
 
+    [Header("Effects")]
+    [SerializeField] private GameObject stepEffect;
+
     private Rigidbody rb;
     private Vector2 movementInput;
     private float cameraPitch;
     private float playerYaw;
+    private GameObject currentStepEffect;
 
     private void Awake()
     {
@@ -90,6 +94,21 @@ public class PlayerController : MonoBehaviour
         velocity.y = rb.velocity.y;
 
         rb.velocity = velocity;
+
+        if (velocity[0] > 0.01 || velocity[0] < -0.01 || velocity[2] > 0.01 || velocity[2] < -0.01)
+        {
+            if (stepEffect == null)
+            {
+                Debug.Log("No step sound effect applied!");
+            }
+            else
+            {
+                if (currentStepEffect == null)
+                {
+                    currentStepEffect = Instantiate(stepEffect);
+                }
+            }
+        }
     }
 
     private void HandleCursor()

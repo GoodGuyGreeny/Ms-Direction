@@ -294,6 +294,8 @@ MonoBehaviour:
   playerCamera: {fileID: 6002980552632768653}
   mouseSensitivity: 2
   maxLookAngle: 85
+  stepEffect: {fileID: 4650692297918825739, guid: 8722b7e52a2ec1642873bdae05a3f501,
+    type: 3}
 --- !u!114 &6851241087212973465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camPos: {fileID: 6002980552632768653}
   interactDistance: 4
+  uiText: {fileID: 0}
 --- !u!114 &6731752333245787346
 MonoBehaviour:
   m_ObjectHideFlags: 0
