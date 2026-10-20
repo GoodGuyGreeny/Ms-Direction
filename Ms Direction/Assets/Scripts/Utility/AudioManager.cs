@@ -36,6 +36,9 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
+        if (tracks.Length < 0)
+            return;
+
         if(currentTrack.isPlaying == false && paused == false)
         {
             currentTrackIndex++;
@@ -52,13 +55,14 @@ public class AudioManager : MonoBehaviour
             Destroy(currentTrackObject);
 
         currentTrackObject = Instantiate(tracks[currentTrackIndex]);
-        currentTrack.transform.parent = Camera.main.transform;
-        currentTrack.transform.localPosition = new Vector3(0, 0, 0);
-        currentTrack = currentTrack.GetComponent<AudioSource>();
+
+        currentTrackObject.transform.parent = Camera.main.transform;
+        currentTrackObject.transform.localPosition = new Vector3(0, 0, 0);
+        currentTrack = currentTrackObject.GetComponent<AudioSource>();
         
-        if(currentTrack = null)
+        if(currentTrack == null)
         {
-            Destroy(currentTrack);
+            Destroy(currentTrackObject);
             Debug.LogError("ERROR in AudioManager.cs: Passed track object does not have an audio source attached!");
             paused = true;
             return;
