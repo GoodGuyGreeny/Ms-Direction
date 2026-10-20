@@ -9034,85 +9034,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675074435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &680792198
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 729421044}
-    m_Modifications:
-    - target: {fileID: 2337946562394253824, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: QuestManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520150572482947282, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: questText
-      value: 
-      objectReference: {fileID: 1458963210}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.1346273
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3475612
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.9143896
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 65cf67e1613abf447bcac36947d97c2d, type: 3}
---- !u!4 &680792199 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7548602673912828478, guid: 65cf67e1613abf447bcac36947d97c2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 680792198}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682011298
 GameObject:
   m_ObjectHideFlags: 0
@@ -9792,7 +9713,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 680792199}
   - {fileID: 1346231366}
   - {fileID: 899929651}
   m_Father: {fileID: 0}
@@ -17563,11 +17483,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -21405,7 +21325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404.1, y: 32}
+  m_AnchoredPosition: {x: -798, y: 436}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458963210
