@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 
     [Tooltip("The index of the current active item in the inventory list")]
     private int activeIndex = 0;
+    public int ActiveIndex => activeIndex;
     // The actual listing of items within our inventory
     private InventorySlot[] inventoryList;
     // An updated list of the most recently accessed/used items in our inventory
@@ -63,6 +64,29 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha8))
             SetActiveItem(7);
+        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ReadingUIManager reader = ReadingUIManager.Instance;
+
+            // If reading, close the document.
+            if (reader != null && reader.IsReading)
+            {
+                reader.CloseDocument();
+            }
+            else
+            {
+                // Otherwise, interact with the selected item.
+                I_InventoryItem activeItem = GetActiveItem();
+
+                if (activeItem != null)
+                {
+                    activeItem.Interact(this);
+                }
+            }
+        }
+
+
     }
 
     // Adds an item into our inventoryList

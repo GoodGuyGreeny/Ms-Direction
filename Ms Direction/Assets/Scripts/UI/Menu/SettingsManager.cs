@@ -55,6 +55,16 @@ public class SettingsManager : MonoBehaviour
         AudioListener.volume = value;
     }
 
+    private void ApplyMusicVolume(float value)
+    {
+        AudioManager.instance.SetMusicVolume(value);
+    }
+
+    private void ApplySFXVolume(float value)
+    {
+        AudioManager.instance.SetSFXVolume(value);
+    }
+
     public static float GetSensitivity()
     {
         return PlayerPrefs.GetFloat(SensitivityKey, 1f);
