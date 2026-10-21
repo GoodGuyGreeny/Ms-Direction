@@ -10,7 +10,8 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
     public enum DeliveryResponseType
     {
         Item,
-        Wrong
+        Wrong,
+        AlternateWrong
     }
 
     public enum DeliveryAction
@@ -73,6 +74,14 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
     [SerializeField] private float fadeDuration = 1f;
 
     private Coroutine responseCoroutine;
+    
+    [Header("Vendor State")]
+    [SerializeField] private bool alternateWrongActive = false;
+
+    public void SetAlternateWrongActive(bool value)
+    {
+        alternateWrongActive = value;
+    }
 
     [Header("Delivery Responses")]
     [SerializeField]
@@ -99,98 +108,112 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
         CheckDelivery(equippedItem, inventory);
     }
 
-    private void CheckDelivery(
-        I_InventoryItem equippedItem,
-        Inventory inventory)
+   
+private void CheckDelivery(
+    I_InventoryItem equippedItem,
+    Inventory inventory)
+{
+    DeliveryResponse wrongResponse = null;
+    DeliveryResponse alternateWrongResponse = null;
+
+    foreach (DeliveryResponse response in responses)
     {
-        DeliveryResponse wrongResponse = null;
-
-        foreach (DeliveryResponse response in responses)
+        // Save both fallback responses.
+        if (response.responseType == DeliveryResponseType.Wrong)
         {
-            // Save the fallback response.
-            if (response.responseType == DeliveryResponseType.Wrong)
+            wrongResponse = response;
+            continue;
+        }
+
+        if (response.responseType == DeliveryResponseType.AlternateWrong)
+        {
+            alternateWrongResponse = response;
+            continue;
+        }
+
+        // Only Item responses should check inventory.
+        if (equippedItem == null || response.requiredItemObject == null)
+            continue;
+
+        response.requiredItem =
+            response.requiredItemObject.GetComponent<I_InventoryItem>();
+
+        if (response.requiredItem == null)
+        {
+            Debug.LogError(
+                "InteractableVendor: Required item does not implement I_InventoryItem."
+            );
+            continue;
+        }
+
+        if (equippedItem.ItemName == response.requiredItem.ItemName)
+        {
+            // Prevent one-time interactions from repeating.
+            if (response.onlyOnce && response.hasBeenUsed)
+                return;
+
+            // Record successful interaction.
+            response.hasBeenUsed = true;
+
+            ShowResponse(response.responseText);
+
+            // Inventory handling
+            if (response.action == DeliveryAction.Destroy)
             {
-                wrongResponse = response;
-                continue;
+                inventory.Remove();
             }
-
-            if (equippedItem == null || response.requiredItemObject == null)
-                continue;
-
-            response.requiredItem =
-                response.requiredItemObject.GetComponent<I_InventoryItem>();
-
-            if (response.requiredItem == null)
+            else if (response.action == DeliveryAction.Replace)
             {
-                Debug.LogError(
-                    "InteractableVendor: Required item does not implement I_InventoryItem."
-                );
-                continue;
-            }
-
-            if (equippedItem.ItemName == response.requiredItem.ItemName)
-            {
-                // Prevent one-time interactions from repeating.
-                if (response.onlyOnce && response.hasBeenUsed)
-                    return;
-
-                // Record successful interaction.
-                response.hasBeenUsed = true;
-
-                ShowResponse(response.responseText);
-
-                // Inventory handling
-                if (response.action == DeliveryAction.Destroy)
+                if (response.replacementItem != null)
                 {
-                    inventory.Remove();
+                    inventory.Replace(response.replacementItem);
                 }
-                else if (response.action == DeliveryAction.Replace)
+                else
                 {
-                    if (response.replacementItem != null)
-                    {
-                        inventory.Replace(response.replacementItem);
-                    }
-                    else
-                    {
-                        Debug.LogWarning(
-                            "InteractableVendor: Replace selected but no replacement assigned."
-                        );
-                    }
-                }
-                // Keep: The equipped item remains unchanged.
-
-                // Quest completion
-                if (response.completeQuestTask &&
-                    !string.IsNullOrEmpty(response.questTaskID) &&
-                    QuestManager.instance != null &&
-                    QuestManager.instance.currentQuest != null)
-                {
-                    QuestManager.instance.currentQuest.CompleteTask(
-                        response.questTaskID
+                    Debug.LogWarning(
+                        "InteractableVendor: Replace selected but no replacement assigned."
                     );
                 }
-
-                // Existing popup functionality
-                PopupSpawner popup = GetComponent<PopupSpawner>();
-
-                if (popup != null)
-                {
-                    popup.SpawnPopup();
-                }
-
-                // Designer-configurable actions
-                response.onSuccess?.Invoke();
-
-                return;
             }
-        }
+            // Keep: The equipped item remains unchanged.
 
-        // No matching item response was found.
-        if (wrongResponse != null)
-        {
-            ShowResponse(wrongResponse.responseText);
+            // Quest completion
+            if (response.completeQuestTask &&
+                !string.IsNullOrEmpty(response.questTaskID) &&
+                QuestManager.instance != null &&
+                QuestManager.instance.currentQuest != null)
+            {
+                QuestManager.instance.currentQuest.CompleteTask(
+                    response.questTaskID
+                );
+            }
+
+            // Existing popup functionality
+            PopupSpawner popup = GetComponent<PopupSpawner>();
+
+            if (popup != null)
+            {
+                popup.SpawnPopup();
+            }
+
+            // Designer-configurable actions
+            response.onSuccess?.Invoke();
+
+            return;
         }
     }
+
+    // Select fallback based on the vendor's current state.
+    DeliveryResponse selectedWrongResponse = alternateWrongActive
+        ? alternateWrongResponse
+        : wrongResponse;
+
+    if (selectedWrongResponse != null)
+    {
+        ShowResponse(selectedWrongResponse.responseText);
+    }
+}
+
 
     private void ShowResponse(string text)
     {
