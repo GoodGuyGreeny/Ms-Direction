@@ -64,27 +64,6 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha8))
             SetActiveItem(7);
-        
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ReadingUIManager reader = ReadingUIManager.Instance;
-
-            // If reading, close the document.
-            if (reader != null && reader.IsReading)
-            {
-                reader.CloseDocument();
-            }
-            else
-            {
-                // Otherwise, interact with the selected item.
-                I_InventoryItem activeItem = GetActiveItem();
-
-                if (activeItem != null)
-                {
-                    activeItem.Interact(this);
-                }
-            }
-        }
 
 
     }
