@@ -6,14 +6,19 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    [Tooltip("Leave NULL. Scripts will take care of track management. Index 0 of \"tracks\" will be the first song played in the scene.")]
+    [HideInInspector]
     public AudioSource currentTrack;
     private GameObject currentTrackObject;
+
+    [HideInInspector]
+    public enum AudioType { Music, SFX };
 
     [SerializeField]
     private GameObject[] tracks;
     private int currentTrackIndex = 0;
     private bool paused = false;
+    private float musicVolume = 100;
+    private float sfxVolume = 100;
 
     private void Awake()
     {
@@ -36,7 +41,7 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        if (tracks.Length < 0)
+        if (tracks.Length <= 0)
             return;
 
         if(currentTrack.isPlaying == false && paused == false)
@@ -68,6 +73,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
+        currentTrack.volume = musicVolume / 100.0f;
         currentTrack.Play();
     }
 
@@ -86,9 +92,33 @@ public class AudioManager : MonoBehaviour
         paused = false;
     }
 
+    public void SetMusicVolume(float value)
+    {
+        musicVolume = value;
+        if(currentTrack != null)
+            currentTrack.volume = musicVolume / 100.0f;
+    }
+
+    public void SetSFXVolume(float value)
+    {
+        sfxVolume = value;
+    }
+
+    public void ApplyVolume(AudioSource audio, AudioType type)
+    {
+        if (type == AudioType.SFX)
+            audio.volume = sfxVolume / 100.0f;
+        else if (type == AudioType.Music)
+            audio.volume = musicVolume / 100.0f;
+        else
+            Debug.LogError("ERROR in AudioManager.cs: Invalid type somehow passed to ApplyVolume function!");
+    }
+
     IEnumerator WaitToPlayTrack(int waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         PlayCurrentTrack();
     }
+
+
 }

@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
                 if (currentStepEffect == null)
                 {
                     currentStepEffect = Instantiate(stepEffect);
+                    AudioManager.instance.ApplyVolume(currentStepEffect.GetComponent<AudioSource>(), AudioManager.AudioType.SFX);
                 }
             }
         }
