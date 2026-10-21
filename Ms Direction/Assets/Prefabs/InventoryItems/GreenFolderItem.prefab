@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 6416056893781414039, guid: 3f1f39a191a954dd687dceb80d4edc93, type: 3}
   itemName: Green Folder

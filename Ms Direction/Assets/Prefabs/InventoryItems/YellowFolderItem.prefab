@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 794942485975062896, guid: 9061d07c414ba485186b17599be0eef4, type: 3}
   itemName: Yellow Folder

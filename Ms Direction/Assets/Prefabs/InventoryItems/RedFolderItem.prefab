@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2442cad639adbd9479ccd00eac0d0f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 2973941404605512154, guid: 948ce69d47ca64b16bcb0d8bbef35c31, type: 3}
   itemName: Red Folder

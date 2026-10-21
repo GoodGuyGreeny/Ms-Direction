@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ef3a171833b74459a655eac798bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1829410014599440566, guid: 1533bbb20bef8f14b915497cf66eb6e6, type: 3}
+  icon: {fileID: 783739035369812745, guid: c8775cadfaf9d4e40a05e220dbdfa7c1, type: 3}
   itemName: Mug

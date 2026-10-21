@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24cb28e5cfda5184ea9ca8beadf1d069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 5380794097467263971, guid: b23987b382e464c6c925d647dee909f3, type: 3}
   itemName: Pencil

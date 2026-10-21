@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e36d5709eea76f449724b9a6173225e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 3547445103160375213, guid: f78a4efdae07241a298dcce4e5f03925, type: 3}
   itemName: Screwdriver
