@@ -21,6 +21,7 @@ public class PlayerDisabler : MonoBehaviour
 
     private void OnDisable()
     {
+
         EventManager.instance.on2DEventPopup -= _ => DisableScripts();
         EventManager.instance.on2DEventClosure -= EnableScripts;
     }

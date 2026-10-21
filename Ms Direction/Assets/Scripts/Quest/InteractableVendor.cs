@@ -10,13 +10,13 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
         Item,
         Wrong
     }
-    
+
     public enum DeliveryAction
     {
         Destroy,
         Replace
     }
-    
+
 
     [System.Serializable]
     public class DeliveryResponse
@@ -25,7 +25,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
 
         [Tooltip("Only used when Action is Replace.")]
         public GameObject replacementItem;
-        
+
         public DeliveryResponseType responseType;
 
         [Tooltip("Only used when Response Type is Item.")]
@@ -36,7 +36,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
 
         [TextArea(2, 5)]
         public string responseText;
-        
+
         [Header("Quest")]
         public bool completeQuestTask;
 
@@ -47,7 +47,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
     [Header("Interaction")]
     [SerializeField] private string localDescriptionText = "Deliver Item";
     public string DescriptionText => localDescriptionText;
-    
+
     [Header("Response UI")]
     [SerializeField] private TMP_Text responseText;
 
@@ -57,7 +57,8 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
     private Coroutine responseCoroutine;
 
     [Header("Delivery Responses")]
-    [SerializeField] private List<DeliveryResponse> responses =
+    [SerializeField]
+    private List<DeliveryResponse> responses =
         new List<DeliveryResponse>();
 
     public void Interacted(GameObject caller = null)
@@ -94,7 +95,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
                 continue;
 
             response.requiredItem = response.requiredItemObject.GetComponent<I_InventoryItem>();
-            if(response.requiredItem == null)
+            if (response.requiredItem == null)
             {
                 Debug.LogError("ERROR in InteractableVender.cs: Given requiredItemObject does not have an I_InventoryItem component!");
                 continue;
@@ -119,7 +120,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
                         Debug.LogWarning("InteractableVendor: Replace action selected but no replacement item assigned.");
                     }
                 }
-                
+
                 if (response.completeQuestTask &&
                     !string.IsNullOrEmpty(response.questTaskID) &&
                     QuestManager.instance != null &&
@@ -195,7 +196,7 @@ public class InteractableVendor : MonoBehaviour, I_Interactable
 
         responseCoroutine = null;
     }
-    
+
     public void BroadcastDescriptionText()
     {
         Debug.Log(localDescriptionText);
