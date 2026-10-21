@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,23 +13,17 @@ public class PlayerDisabler : MonoBehaviour
 {
     [SerializeField]
     private MonoBehaviour[] scriptsToDisable;
-
     void OnEnable()
     {
-        EventManager.instance.on2DEventPopup += Handle2DEventPopup;
+        EventManager.instance.on2DEventPopup += _ => DisableScripts();
         EventManager.instance.on2DEventClosure += EnableScripts;
     }
 
     private void OnDisable()
     {
-        EventManager.instance.on2DEventPopup -= Handle2DEventPopup;
-        EventManager.instance.on2DEventClosure -= EnableScripts;
-    }
 
-    // Named handler to ensure event unsubscription finds the exact method.
-    private void Handle2DEventPopup(GameObject popup)
-    {
-        DisableScripts();
+        EventManager.instance.on2DEventPopup -= _ => DisableScripts();
+        EventManager.instance.on2DEventClosure -= EnableScripts;
     }
 
     void DisableScripts()
@@ -47,17 +40,5 @@ public class PlayerDisabler : MonoBehaviour
         {
             scriptsToDisable[i].enabled = true;
         }
-    }
-
-    // Added for the Reading System.
-    public void DisableForReading()
-    {
-        DisableScripts();
-    }
-
-    // Added for the Reading System.
-    public void EnableAfterReading()
-    {
-        EnableScripts();
     }
 }
