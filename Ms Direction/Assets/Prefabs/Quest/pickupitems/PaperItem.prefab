@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4759547b9ab1cd4e903d07772a559a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 8550219116150561921, guid: c39c3b68e545e734aa6e3dbcbd0fa4be, type: 3}
   itemName: Paper
