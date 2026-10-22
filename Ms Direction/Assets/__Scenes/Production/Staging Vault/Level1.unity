@@ -19044,36 +19044,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1443087472172732645}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &977777362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977777360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d1ac19e8b720f4899c2027895b08f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localDescriptionText: Reports here seem similiar...
-  responseText: {fileID: 1472941388}
-  displayDuration: 2
-  fadeDuration: 1
-  alternateWrongActive: 0
-  responses:
-  - responseType: 0
-    requiredItemObject: {fileID: 0}
-    responseText: Grabbed a report
-    action: 1
-    replacementItem: {fileID: 5641753289370277724, guid: f6edf9249d5b05d45addcf6ef313a72d,
-      type: 3}
-    completeQuestTask: 0
-    questTaskID: 
-    onSuccess:
-      m_PersistentCalls:
-        m_Calls: []
-    onlyOnce: 0
 --- !u!65 &977777365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19095,6 +19065,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01794, y: 0.0121844, z: 0.0162}
   m_Center: {x: 0.000000014901161, y: 0.000000029802322, z: 0.000000020489097}
+--- !u!114 &977777368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977777360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f952388f37ef06746ae350aab2d085a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Take Item
+  itemPrefab: {fileID: 3380303278752109696, guid: f5d3ac4f753b4c04c8e0e91158291bf4,
+    type: 3}
 --- !u!1001 &978458159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44498,11 +44483,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3445051885847822580, guid: 9b538488f8438ff4bb65584c789deaa0,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 977777362}
+      addedObject: {fileID: 977777365}
     - targetCorrespondingSourceObject: {fileID: 3445051885847822580, guid: 9b538488f8438ff4bb65584c789deaa0,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 977777365}
+      addedObject: {fileID: 977777368}
   m_SourcePrefab: {fileID: 100100000, guid: 9b538488f8438ff4bb65584c789deaa0, type: 3}
 --- !u!1001 &1459872637663239747
 PrefabInstance:
