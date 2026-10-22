@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -13,22 +12,31 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float maxLookAngle = 85f;
 
+    [Header("Effects")]
+    [SerializeField] private GameObject stepEffect;
+
     private Rigidbody rb;
     private Vector2 movementInput;
     private float cameraPitch;
     private float playerYaw;
+    private GameObject currentStepEffect;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
         playerYaw = transform.eulerAngles.y;
     }
 
     private void Start()
+    {
+        LockCursor();
+    }
+
+    private void OnEnable()
     {
         LockCursor();
     }
@@ -43,7 +51,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
-        rb.MoveRotation(Quaternion.Euler(0f, playerYaw, 0f));
     }
 
     private void HandleInput()
@@ -69,7 +76,8 @@ public class PlayerController : MonoBehaviour
         cameraPitch -= mouseY;
         cameraPitch = Mathf.Clamp(cameraPitch, -maxLookAngle, maxLookAngle);
 
-        playerCamera.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
+        playerCamera.localRotation =
+            Quaternion.Euler(cameraPitch, playerYaw, 0f);
     }
 
     private void HandleMovement()
@@ -86,20 +94,32 @@ public class PlayerController : MonoBehaviour
         velocity.y = rb.velocity.y;
 
         rb.velocity = velocity;
+
+        if (velocity[0] > 0.01 || velocity[0] < -0.01 || velocity[2] > 0.01 || velocity[2] < -0.01)
+        {
+            if (stepEffect == null)
+            {
+                Debug.Log("No step sound effect applied!");
+            }
+            else
+            {
+                if (currentStepEffect == null)
+                {
+                    currentStepEffect = Instantiate(stepEffect);
+                    AudioManager.instance.ApplyVolume(currentStepEffect.GetComponent<AudioSource>(), AudioManager.AudioType.SFX);
+                }
+            }
+        }
     }
 
     private void HandleCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        if (Time.timeScale == 0f)
+            return;
 
         if (Input.GetMouseButtonDown(0))
             LockCursor();
     }
-
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;

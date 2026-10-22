@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574c2f64be3863946a607cb4789a8c66, type: 3}
+  m_Name: Quest_Floor1
+  m_EditorClassIdentifier: 
+  tasks:
+  - descriptionText: "1. First you must go to the supply closet Find the exit to
+      the entry room that is directly across from the building entrance Then, once
+      exiting, walk forward until you reach the far door Open the door and enter
+      the closet 2. Turn right 90 Degrress and pick up a folder from the pile 3.
+      With folder selected interacted with the GREEN paint and make a green folder
+      4. Now that you have a green folder, go to the quality control desk  To do
+      so, exit the supply closet and take the first door on your right Go to the
+      desk at the far end of the room and you\u2019ll be golden! "
+    id: Tut_Paint
+    completePrevious: 0
+  - descriptionText: 'Great! Now you are to be assigned a task that has been the
+      end of many a hire! First, exit the room the door you came in from Next, walk
+      down the hallway you came here in. Turn left down the hallway that appears
+      to your left and walk forward The yellow folder will be on the table that appears
+      to your left  Pick up the yellow folder Deliver yellow folder to Quality control
+      desk '
+    id: 1_Yellow
+    completePrevious: 1
+  - descriptionText: 'Great Job on your first completion! Now, you shall be given
+      another task we frequent with the newer faces (player receives report) First,
+      exit the room the door you came in from Next, walk forward and diagonally until
+      you pass a door.  Turn left down that hallway and walk forward Once entering
+      the far room turn left and walk down the wall Go to the copier and copy the
+      Report! Deliver copied reports to Quality control desk '
+    id: 1_Report
+    completePrevious: 1
+  - descriptionText: "Oh my! It appears your predecessor was engaged in fraud on
+      behalf of the company! Well, we can\u2019t let that come back to bite us, so
+      you are going to have to dispose of that.  Return to the copying machine The
+      shredder is next to it, to the right of it when facing the copying machine
+      and the wall Use the Shredder and DESTROY the compromising document "
+    id: 1_Fraud
+    completePrevious: 1
