@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 7848002404551653605}
   - component: {fileID: 2785363563081619452}
   - component: {fileID: 1344307388867072915}
-  - component: {fileID: 300630251295563472}
+  - component: {fileID: 2115530146302640586}
   m_Layer: 0
   m_Name: R_Door
   m_TagString: Untagged
@@ -358,7 +358,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1117381760948439350, guid: 4e2a8711ef0ee554ba0d803fc7b5de84, type: 3}
---- !u!114 &300630251295563472
+--- !u!114 &2115530146302640586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,14 +367,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2988353412491754798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3355429ebe3283c4d8691149160ff38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
-  pivotSide: 0
-  openOutward: 1
+  doorSide: 0
+  elevatorFacing: 2
   openAtSpawn: 0
-  openAngle: 90
   openSpeed: 3
 --- !u!1 &3278041342496550550
 GameObject:
@@ -501,6 +500,7 @@ MonoBehaviour:
   responseText: {fileID: 0}
   displayDuration: 2
   fadeDuration: 1
+  alternateWrongActive: 0
   responses:
   - responseType: 1
     requiredItemObject: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 510611922717653739}
   - component: {fileID: 1939437594985313955}
   - component: {fileID: 2807144376059814328}
-  - component: {fileID: 2361235834475800558}
+  - component: {fileID: 7020602299399068853}
   m_Layer: 0
   m_Name: L_Door
   m_TagString: Untagged
@@ -711,7 +711,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7661454039534292870, guid: 4e2a8711ef0ee554ba0d803fc7b5de84, type: 3}
---- !u!114 &2361235834475800558
+--- !u!114 &7020602299399068853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -720,12 +720,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9143355552928262351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07b63da450112d45a3e7fc78c2c20b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3355429ebe3283c4d8691149160ff38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
-  pivotSide: 0
-  openOutward: 1
+  doorSide: 1
+  elevatorFacing: 2
   openAtSpawn: 0
-  openAngle: 90
   openSpeed: 3
