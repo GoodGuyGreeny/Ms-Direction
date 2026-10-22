@@ -16,8 +16,8 @@ MonoBehaviour:
   - descriptionText: "1. First you must go to the supply closet Find the exit to
       the entry room that is directly across from the building entrance Then, once
       exiting, walk forward until you reach the far door Open the door and enter
-      the closet 2. Turn right (away from wrench) and pick up a folder from the pile
-      3. With folder selected interacted with the GREEN paint and make a green folder
+      the closet 2. Turn right 90 Degrress and pick up a folder from the pile 3.
+      With folder selected interacted with the GREEN paint and make a green folder
       4. Now that you have a green folder, go to the quality control desk  To do
       so, exit the supply closet and take the first door on your right Go to the
       desk at the far end of the room and you\u2019ll be golden! "
@@ -25,9 +25,10 @@ MonoBehaviour:
     completePrevious: 0
   - descriptionText: 'Great! Now you are to be assigned a task that has been the
       end of many a hire! First, exit the room the door you came in from Next, walk
-      forward and diagonally until you pass a door.  Turn left down that hallway
-      and walk forward The yellow folder will be on the table that appears to your
-      left  Pick up the yellow folder Deliver yellow folder to Quality control desk '
+      down the hallway you came here in. Turn left down the hallway that appears
+      to your left and walk forward The yellow folder will be on the table that appears
+      to your left  Pick up the yellow folder Deliver yellow folder to Quality control
+      desk '
     id: 1_Yellow
     completePrevious: 1
   - descriptionText: 'Great Job on your first completion! Now, you shall be given
