@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Quest_Tutorial
   m_EditorClassIdentifier: 
   tasks:
-  - descriptionText: '1. Walk to the wall opposite the entry door and face it.  2.
-      Turn right 90 degrees 3. Walk to the table that is in the corner 4. Pick up
-      the folder on the table with [e] 5. Turn right 90 degrees 6. Walk to the manned
-      desk in your field of view and turn it in with [e] '
+  - descriptionText: '  1. Turn left 90 degrees 2. Walk to the table that is in the
+      corner 4. Pick up the folder on the table with [e] 5. Turn right 180 degrees
+      6. Walk to the manned desk in your field of view and turn it in with [e] '
     id: Tut_Folder
     completePrevious: 0
   - descriptionText: '1. Turn such that you are facing the wall left of your entry
