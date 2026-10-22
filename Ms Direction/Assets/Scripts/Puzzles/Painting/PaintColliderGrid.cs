@@ -59,7 +59,7 @@ public class PaintColliderGrid : MonoBehaviour
 
                 GameObject cellInstance = Instantiate(cell);
                 cellInstance.transform.parent = this.gameObject.transform;
-                cellInstance.transform.localPosition = pos;
+                cellInstance.transform.position = pos;
                 cellInstance.GetComponent<BoxCollider2D>().size = new Vector2(gridCellWidth, gridCellHeight);
 
                 cellCount++;
