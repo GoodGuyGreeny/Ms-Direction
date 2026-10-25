@@ -5,11 +5,16 @@ using UnityEngine;
 public class MousePaintHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject brushPrefab;
+    private GameObject brushRendererPrefab;
+    [SerializeField] 
+    private GameObject brushColliderPrefab;
+    [SerializeField]
+    private RectTransform lineContainer;
     private RectTransform canvas;
 
-    private GameObject lineInstance;
-    private LineRenderer lineInstanceRenderer;
+    private GameObject brushColliderInstance;
+    private UILineRenderer brushRendererInstance;
+    [SerializeField]
     private Color selectedRenderColor;
 
     private Vector2 mouseUIPos;
@@ -23,7 +28,8 @@ public class MousePaintHandler : MonoBehaviour
         // I dont erven care anymore man whatever sure SURE WHATEVER FINE
         canvas = this.transform.parent.parent.GetComponent<RectTransform>();
 
-        selectedRenderColor = brushPrefab.GetComponent<LineRenderer>().startColor;
+        brushColliderInstance = Instantiate(brushColliderPrefab);
+        brushColliderInstance.transform.SetParent(this.transform);
     }
 
     private void Update()
@@ -32,16 +38,17 @@ public class MousePaintHandler : MonoBehaviour
         {
             GetMousePosition();
 
-            if (lineInstance == null)
+            if (brushRendererInstance == null)
                 CreateNewLine();
-            lineInstance.transform.position = mousePos3D;
+            brushColliderInstance.SetActive(true);
+            brushColliderInstance.transform.position = mousePos3D;
 
             AddLinePosition();
         }
         else
         {
-            lineInstance = null;
-            lineInstanceRenderer = null;
+            brushColliderInstance.SetActive(false);
+            brushRendererInstance = null;
         }
     }
 
@@ -50,26 +57,30 @@ public class MousePaintHandler : MonoBehaviour
         // The next two lines i sourced from: https://discussions.unity.com/t/4-6-ui-image-follow-mouse-position/124459
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas, Input.mousePosition, null, out mouseUIPos);
         mousePos3D = canvas.transform.TransformPoint(mouseUIPos);
+
+        Rect rect = canvas.rect;
+
+        mouseUIPos.x = (mouseUIPos.x - rect.xMin) / rect.width;
+        mouseUIPos.y = (mouseUIPos.y - rect.yMin) / rect.height;
     }
 
     private void CreateNewLine()
     {
-        lineInstance = Instantiate(brushPrefab);
-        lineInstance.transform.SetParent(this.transform);
-        lineInstance.transform.position = mousePos3D;
+        GameObject lineInstance = Instantiate(brushRendererPrefab);
+        lineInstance.transform.SetParent(lineContainer, false);
 
-        lineInstanceRenderer = lineInstance.GetComponent<LineRenderer>();
+        brushRendererInstance = lineInstance.GetComponent<UILineRenderer>();
 
-        lineInstanceRenderer.startColor = selectedRenderColor;
-        lineInstanceRenderer.endColor = selectedRenderColor;
-        lineInstanceRenderer.SetPosition(0, mousePos3D);
-        lineInstanceRenderer.SetPosition(1, mousePos3D);
+        brushRendererInstance.color = selectedRenderColor;
+        brushRendererInstance.positionCount = 2;
+        brushRendererInstance.SetPosition(0, mouseUIPos);
+        brushRendererInstance.SetPosition(1, mouseUIPos);
     }
 
     private void AddLinePosition()
     {
-        lineInstanceRenderer.positionCount++;
-        lineInstanceRenderer.SetPosition(lineInstanceRenderer.positionCount - 1, mousePos3D);
+        brushRendererInstance.positionCount++;
+        brushRendererInstance.SetPosition(brushRendererInstance.positionCount - 1, mouseUIPos);
     }
 
     public void ChangeColor(Color color)
