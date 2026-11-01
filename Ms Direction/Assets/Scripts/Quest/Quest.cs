@@ -13,6 +13,12 @@ public class Quest : MonoBehaviour
     {
         return data.GetCurrentTaskDescription();
     }
+    
+    // Exposes the current task ID from QuestData.
+    public string GetCurrentTaskID()
+    {
+        return data.GetCurrentTaskID();
+    }
 
     // Attempts to complete the task associated with the given ID.
     // Returns true if it succeeds, and false if it fails.
@@ -20,11 +26,29 @@ public class Quest : MonoBehaviour
     {
         if(data.CanTaskBeCompleted(id))
         {
+            // Remember the active task before updating completion status.
+            string previousActiveTask = data.GetCurrentTaskID();
+            
             Debug.Log("Task: " + id + " has been completed!");
             data.SetTaskToComplete(id);
             QuestManager.instance.UpdateQuestDisplay();
+
+            // Notify Ms. Direction when a task completes or a new task activates.
+            if (MsDirectionDialogueManager.Instance != null)
+            {
+                MsDirectionDialogueManager.Instance.TaskCompleted(id);
+
+                string currentTask = data.GetCurrentTaskID();
+
+                if (currentTask != previousActiveTask &&
+                    !string.IsNullOrEmpty(currentTask))
+                {
+                    MsDirectionDialogueManager.Instance.TaskActivated(currentTask);
+                }
+            }
+
             CheckQuestCompletion();
-            return true;
+            return true;    
         }
 
         Debug.Log("Task: " + id + " could not be completed.");

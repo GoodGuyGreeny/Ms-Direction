@@ -41,11 +41,18 @@ public class QuestManager : MonoBehaviour
         }
         
         UpdateQuestDisplay();
+        
+        // Notify Ms. Direction when the first task activates.
+        if (currentQuest != null && MsDirectionDialogueManager.Instance != null)
+        {
+            MsDirectionDialogueManager.Instance.TaskActivated(currentQuest.GetCurrentTaskID());
+        }
     }
 
     // Completes the active quest, and begins quest transition
     public void CurrentQuestComplete()
     {
+       
         // Possibly update UI?
         // Possibly play voice line?
         // All stuff I can't implement just yet!
@@ -70,6 +77,13 @@ public class QuestManager : MonoBehaviour
         // This line is only needed in the editor. See the inner functions comment for more details.
         currentQuest.SetAllTasksToBeIncomplete();
         UpdateQuestDisplay();
+        
+        // Notify Ms. Direction when the next quest activates.
+        // Notify Ms. Direction when the first task of the next quest activates.
+        if (MsDirectionDialogueManager.Instance != null)
+        {
+            MsDirectionDialogueManager.Instance.TaskActivated(currentQuest.GetCurrentTaskID());
+        }
     }
 
     // Calls the UI Manager to update the quest UI
@@ -78,6 +92,7 @@ public class QuestManager : MonoBehaviour
         string description = currentQuest.GetCurrentTaskDescription();
 
         QuestUIManager.instance.UpdateQuestUI(description);
+        
     }
 
     // Small buffer between quest completion and quest transition

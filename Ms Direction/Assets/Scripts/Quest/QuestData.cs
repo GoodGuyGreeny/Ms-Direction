@@ -22,6 +22,20 @@ public class QuestData : ScriptableObject
 
         return "";
     }
+    
+    // Returns the ID of the first incomplete task.
+    public string GetCurrentTaskID()
+    {
+        foreach (QuestTask task in tasks)
+        {
+            if (!task.GetCompletionStatus())
+            {
+                return task.GetID();
+            }
+        }
+
+        return "";
+    }
 
     // Checks whether the passed task is able to be completed.
     // Tasks are unable to be completed when they require all previous tasks
