@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: Quest_Tutorial
   m_EditorClassIdentifier: 
   tasks:
-  - descriptionText: '  1. Turn left 90 degrees 2. Walk to the table that is in the
-      corner 4. Pick up the folder on the table with [e] 5. Turn right 180 degrees
-      6. Walk to the manned desk in your field of view and turn it in with [e] '
+  - descriptionText: Deliver a Folder
     id: Tut_Folder
     completePrevious: 0
-  - descriptionText: '1. Turn such that you are facing the wall left of your entry
-      point 2. Walk to the loaded table that should appear in your field of vision
-      3. Grab a mug with [e] 4. While holding mug, fill it up with FOLLOW brand Coffee
-      at the machine with [e] 5. Return to the desk where you deposited your folder
-      and give them your coffee with [e] '
+  - descriptionText: Deliver a Coffee
     id: Tut_Coffee
     completePrevious: 1
