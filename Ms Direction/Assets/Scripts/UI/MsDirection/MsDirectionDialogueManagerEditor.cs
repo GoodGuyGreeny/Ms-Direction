@@ -36,7 +36,7 @@ public class MsDirectionDialogueManagerEditor : Editor
             {
                 Field(popup, "id", "Popup ID");
                 Field(popup, "dialogueText", "Dialogue Text");
-                Field(popup, "duration", "Duration (Seconds)");
+                Field(popup, "duration", "Duration (Seconds; 0 = Until Replaced)");
                 Field(popup, "triggerOnlyOnce", "Trigger Only Once");
 
                 EditorGUILayout.Space(6);
