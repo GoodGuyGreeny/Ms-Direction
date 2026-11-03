@@ -20,6 +20,7 @@ public class ButtonPuzzle : MonoBehaviour
     public GameObject button2Paint;
     public GameObject button3Paint;
     public GameObject button4Paint;
+    bool alternate = false;
 
 
 
@@ -70,7 +71,19 @@ public class ButtonPuzzle : MonoBehaviour
         button2Paint.SetActive(true);
         button3Paint.SetActive(true);
         button4Paint.SetActive(true);
+        alternate = true;
     }
+    
+    public void Hinge()
+    {
+        alternate = true;
+    }
+
+    public void HingeOff()
+    {
+        alternate = false;
+    }
+
 
 
     // Update is called once per frame
@@ -80,12 +93,14 @@ public class ButtonPuzzle : MonoBehaviour
         {
             winbutton = true;
         }
+        else if (alternate)
+        {
+            winbutton = true;
+        }
         else
         {
             winbutton = false;
         }
-
-
     }
 
 
