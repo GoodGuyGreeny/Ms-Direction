@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Pickup : MonoBehaviour, I_Interactable
 {
+    [Header("Effects")]
+    [SerializeField] private GameObject pickupEffect;
+
     [SerializeField]
     private string localDescriptionText;
     public string DescriptionText { get { return localDescriptionText; } }
@@ -20,6 +23,16 @@ public class Pickup : MonoBehaviour, I_Interactable
             Debug.Log("In this");
             possibleInv.Add(inventoryItem);
             this.gameObject.SetActive(false);
+
+            if (pickupEffect == null)
+            {
+                Debug.Log("No step sound effect applied!");
+            }
+            else
+            {
+                Instantiate(pickupEffect);
+                AudioManager.instance.ApplyVolume(pickupEffect.GetComponent<AudioSource>(), AudioManager.AudioType.SFX);
+            }
         }
         
     }
