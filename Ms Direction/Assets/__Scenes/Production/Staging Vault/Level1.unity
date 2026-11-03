@@ -3824,6 +3824,22 @@ MonoBehaviour:
     afterPopupId: R-0
     followUpDelay: 3
     onVendorEvent: 0
+  - id: S-1
+    dialogueText: Go to the server room. The four frontal servers are currently red.
+      Please fix them so they turn green.
+    duration: 0
+    triggerOnlyOnce: 1
+    onTaskActivation: 0
+    activationTaskId: 1_Fraud
+    requireActiveTask: 0
+    activeTaskId: 
+    onTriggerHit: 0
+    onTaskCompletion: 0
+    completionTaskId: 
+    timedFollowUp: 0
+    afterPopupId: R-0
+    followUpDelay: 3
+    onVendorEvent: 0
   - id: F-0
     dialogueText: "Oh my! It appears your predecessor was engaged in fraud on behalf
       of the company! Well, we can\u2019t let that come back to bite us, so you are
@@ -3838,8 +3854,8 @@ MonoBehaviour:
     onTaskCompletion: 0
     completionTaskId: 
     timedFollowUp: 0
-    afterPopupId: 
-    followUpDelay: 3
+    afterPopupId: F-0
+    followUpDelay: 0
     onVendorEvent: 0
   - id: F-1
     dialogueText: "Return to the copying machine\r\nThe shredder is next to it, to
@@ -3848,7 +3864,7 @@ MonoBehaviour:
     duration: 0
     triggerOnlyOnce: 1
     onTaskActivation: 0
-    activationTaskId: 
+    activationTaskId: 1_Promote
     requireActiveTask: 0
     activeTaskId: 
     onTriggerHit: 0
@@ -3858,7 +3874,7 @@ MonoBehaviour:
     afterPopupId: F-0
     followUpDelay: 0
     onVendorEvent: 0
-  - id: El-0
+  - id: EI-0
     dialogueText: 'Well well well, it appears you have performed above and beyond
       expected metrics. You are being given a promotion. Here, take the Senior Member
       Acess Key and go to the elevator next to the Supply Closet. You are now assigned
@@ -4284,6 +4300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -8698,6 +8715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -9601,6 +9619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -12497,6 +12516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -13111,7 +13131,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1194488452}
+    m_TransformParent: {fileID: 518689006}
     m_Modifications:
     - target: {fileID: 3102189425928445057, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -13131,7 +13151,7 @@ PrefabInstance:
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.58
+      value: -10.580002
       objectReference: {fileID: 0}
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -14211,6 +14231,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6360785561152469024, guid: 5663c7c06bbdc88499083513aecbcffd,
     type: 3}
   m_PrefabInstance: {fileID: 785064477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &518689006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 240648776231269763, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1194488451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &519507957
 GameObject:
@@ -16976,7 +17002,7 @@ PrefabInstance:
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].action
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
@@ -16991,8 +17017,8 @@ PrefabInstance:
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].responseText
-      value: Thank you for these reports. On a completely different note, here are
-        the 'documents'.
+      value: Thank you for these reports. Now, I need you to please fix the server
+        room by turning all the lights on.
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
@@ -18052,7 +18078,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1194488452}
+    m_TransformParent: {fileID: 518689006}
     m_Modifications:
     - target: {fileID: 3102189425928445057, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -18072,7 +18098,7 @@ PrefabInstance:
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.74
+      value: -9.739998
       objectReference: {fileID: 0}
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -20223,6 +20249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -25066,6 +25093,100 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882096088}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &889834403
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1414726394}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000003774895
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7db3e870e3d26e941958a2ade05ddd58,
+        type: 3}
+      propertyPath: m_Name
+      value: paint brush (Green)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7db3e870e3d26e941958a2ade05ddd58, type: 3}
+--- !u!4 &889834404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7db3e870e3d26e941958a2ade05ddd58,
+    type: 3}
+  m_PrefabInstance: {fileID: 889834403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &894723204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27175,7 +27296,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1194488452}
+    m_TransformParent: {fileID: 518689006}
     m_Modifications:
     - target: {fileID: 3102189425928445057, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -27195,7 +27316,7 @@ PrefabInstance:
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.12
+      value: -10.119999
       objectReference: {fileID: 0}
     - target: {fileID: 5730901123794670763, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
@@ -32252,6 +32373,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
         type: 3}
+    - target: {fileID: 1440936937356209744, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: quests.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440936937356209744, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: quests.Array.data[1]
+      value: 
+      objectReference: {fileID: 1483493898625752824, guid: b4fd96cd088baaf45ad95963ff6aab22,
+        type: 3}
+    - target: {fileID: 1440936937356209744, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: quests.Array.data[2]
+      value: 
+      objectReference: {fileID: 1483493898625752824, guid: cf27d12db39dce4439b7ebd6f1c44bd9,
+        type: 3}
     - target: {fileID: 1621558743300216827, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_Height
@@ -32291,6 +32429,16 @@ PrefabInstance:
         type: 3}
       propertyPath: responses.Array.data[0].responseText
       value: 'Great! But be careful with Ms Direction. She can mess things up. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676975114119245199, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676975114119245199, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1827327322636463623, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
@@ -32391,7 +32539,27 @@ PrefabInstance:
     - target: {fileID: 4076675979256969246, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: -0.683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076675979256969246, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076675979256969246, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7395215
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076675979256969246, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.67313296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076675979256969246, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -84.619
       objectReference: {fileID: 0}
     - target: {fileID: 4294489153257180347, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
@@ -32855,18 +33023,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8786746555340178123, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 657670240}
-    - targetCorrespondingSourceObject: {fileID: 8786746555340178123, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 969089993}
-    - targetCorrespondingSourceObject: {fileID: 8786746555340178123, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 493291930}
-    - targetCorrespondingSourceObject: {fileID: 8786746555340178123, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2044033002}
     - targetCorrespondingSourceObject: {fileID: 8786746555340178123, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
@@ -32876,6 +33032,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1379385225}
+    - targetCorrespondingSourceObject: {fileID: 240648776231269763, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 657670240}
+    - targetCorrespondingSourceObject: {fileID: 240648776231269763, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969089993}
+    - targetCorrespondingSourceObject: {fileID: 240648776231269763, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 493291930}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1713930965366017574, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
@@ -33962,6 +34130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -34364,6 +34533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -38221,6 +38391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -38565,6 +38736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -38972,6 +39144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -39321,6 +39494,7 @@ Transform:
   - {fileID: 1659595329}
   - {fileID: 2028104924}
   - {fileID: 1484141348}
+  - {fileID: 1414726394}
   m_Father: {fileID: 1194488452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386123159
@@ -39443,6 +39617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -40302,6 +40477,77 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 38987872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414726393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414726394}
+  - component: {fileID: 1414726396}
+  - component: {fileID: 1414726395}
+  m_Layer: 0
+  m_Name: Paintbrush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414726394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414726393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.743, y: 18.904, z: -10.371}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 889834404}
+  m_Father: {fileID: 1379385225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414726395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414726393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 0}
+  localDescriptionText: Paintbrush
+  inventoryItem: {fileID: 3380303278752109696, guid: f5488c17983c8f44c9a4a042b058db6a,
+    type: 3}
+--- !u!65 &1414726396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414726393}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1415396572
 GameObject:
   m_ObjectHideFlags: 0
@@ -43278,6 +43524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -43639,6 +43886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -51612,6 +51860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -56322,6 +56571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
@@ -57416,6 +57666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 0
+  doorEffect: {fileID: 0}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 90
