@@ -15,6 +15,9 @@ public class InteractableDoor : MonoBehaviour, I_Interactable
     [Header("Door Settings")]
     [SerializeField] private PivotSide pivotSide = PivotSide.Left;
 
+    [Header("Effects")]
+    [SerializeField] private GameObject doorEffect;
+
     [SerializeField] private bool openOutward = true;
     [SerializeField] private bool openAtSpawn = false;
 
@@ -172,6 +175,16 @@ public class InteractableDoor : MonoBehaviour, I_Interactable
 
         localDescriptionText =
             isOpen ? "Close Door" : "Open Door";
+
+        if (doorEffect == null)
+        {
+            Debug.Log("No door sound effect applied!");
+        }
+        else
+        {
+            Instantiate(doorEffect);
+            AudioManager.instance.ApplyVolume(doorEffect.GetComponent<AudioSource>(), AudioManager.AudioType.SFX);
+        }
     }
 
     public void BroadcastDescriptionText()

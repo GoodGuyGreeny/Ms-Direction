@@ -140,6 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localDescriptionText: Open Door
   pivotSide: 1
+  doorEffect: {fileID: 4650692297918825739, guid: 7fa67015ecee04e4ba640ca5943bb0de,
+    type: 3}
   openOutward: 1
   openAtSpawn: 0
   openAngle: 80
