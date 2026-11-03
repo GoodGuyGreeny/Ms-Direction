@@ -4367,11 +4367,11 @@ MonoBehaviour:
     followUpDelay: 3
     onVendorEvent: 0
   - id: R-1
-    dialogueText: "First, exit the room the door you came in from\r\nNext, walk forward
-      and diagonally until you pass a door. \r\nTurn left down that hallway and walk
-      forward\r\nOnce entering the far room turn left and walk down the wall\r\nGo
-      to the copier and copy the Report!\r\nDeliver copied reports to Quality control
-      desk\r"
+    dialogueText: "First, exit the room the door you came in from\r\nNext, walk down
+      the hallway you came here in.\r\nTurn left down the hallway that appears to
+      your left and walk forward\r\nOnce entering the far room turn left and walk
+      down the wall\r\nThe paper is on the table and take it\nGo to the copier and
+      copy the Report!\r\nDeliver copied reports to Quality control desk\r"
     duration: 0
     triggerOnlyOnce: 1
     onTaskActivation: 0
@@ -4474,9 +4474,9 @@ MonoBehaviour:
     onTriggerHit: 0
     onTaskCompletion: 0
     completionTaskId: 
-    timedFollowUp: 0
-    afterPopupId: 
-    followUpDelay: 3
+    timedFollowUp: 1
+    afterPopupId: F-1
+    followUpDelay: 1
     onVendorEvent: 0
   - id: S-0
     dialogueText: 'Oh No! Our server are down!
