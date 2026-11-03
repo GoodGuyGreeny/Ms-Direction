@@ -12,4 +12,10 @@ public class TempLoader : MonoBehaviour
     {
         SceneManager.LoadScene(Scene);
     }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
 }
