@@ -7,10 +7,24 @@ public class PuzzleCompleteQuestCompleter : MonoBehaviour
     public string QuestID;
     public GameObject buttonPuzzle;
     public ButtonPuzzle Bpuz;
-    public GameObject ButtonBadDoor;
+    public GameObject Servguy;
+    public GameObject Repguy;
+    private bool solved = false;
     public void Start()
     {
         Bpuz = buttonPuzzle.GetComponent<ButtonPuzzle>();
+    }
+
+    public void Update()
+    {
+        if (solved == false)
+        {
+            if (Bpuz.winbutton == true)
+            {
+                ButtonTaskComplete();
+            }
+        }
+        
     }
 
     public void CompleteQuest()
@@ -21,9 +35,12 @@ public class PuzzleCompleteQuestCompleter : MonoBehaviour
 
     public void ButtonTaskComplete()
     {
-        if (Bpuz.winbutton == true| ButtonBadDoor.activeInHierarchy == false)
+        if (Bpuz.winbutton == true)
         {
             CompleteQuest();
+            Servguy.gameObject.SetActive(true);
+            Repguy.gameObject.SetActive(false);
+            solved = true;
         }
     }
 

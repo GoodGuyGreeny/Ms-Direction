@@ -32519,6 +32519,16 @@ PrefabInstance:
       propertyPath: responses.Array.data[0].responseText
       value: 'Great! But be careful with Ms Direction. She can mess things up. '
       objectReference: {fileID: 0}
+    - target: {fileID: 1676975114119245199, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.91280746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676975114119245199, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -1.2508068
+      objectReference: {fileID: 0}
     - target: {fileID: 1827327322636463623, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_LocalPosition.x
