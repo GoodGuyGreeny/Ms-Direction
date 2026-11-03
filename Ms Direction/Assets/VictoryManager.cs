@@ -16,5 +16,7 @@ public class VictoryManager : MonoBehaviour
     {
         Time.timeScale = 0;
         VictoryScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

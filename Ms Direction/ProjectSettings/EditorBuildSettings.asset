@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/__Scenes/Testing/Player Controller Test.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/__Scenes/Testing/Level1-TE-IMP.unity
-    guid: 8cb504e21ed76fd4ebed1ade72d5b0b9
+    path: Assets/__Scenes/Production/Staging Vault/Main_Menu.unity
+    guid: 53ee3722a1122f1419af4a84c3aaacaf
   - enabled: 1
     path: Assets/__Scenes/Production/Staging Vault/Level1.unity
     guid: c3ef7747b752e2e4b817f1592738f900
+  - enabled: 0
+    path: Assets/__Scenes/Testing/Level1-TE-IMP.unity
+    guid: 8cb504e21ed76fd4ebed1ade72d5b0b9
+  - enabled: 0
+    path: Assets/__Scenes/Testing/Player Controller Test.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
