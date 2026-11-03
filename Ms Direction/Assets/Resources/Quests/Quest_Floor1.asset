@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest_Floor1
   m_EditorClassIdentifier: 
   tasks:
-  - descriptionText: Paint a Greeb Folder
+  - descriptionText: Paint a Green Folder
     id: Tut_Paint
     completePrevious: 0
   - descriptionText: Deliver a Yellow Folder
@@ -22,12 +22,9 @@ MonoBehaviour:
   - descriptionText: Copy a Report
     id: 1_Report
     completePrevious: 1
-  - descriptionText: Fix the Servers
-    id: 1_Server
-    completePrevious: 1
   - descriptionText: Cover up Fraud
     id: 1_Fraud
     completePrevious: 1
-  - descriptionText: Seize You Promotion
+  - descriptionText: Seize Your Promotion
     id: 1_Promote
     completePrevious: 1

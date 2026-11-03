@@ -3587,9 +3587,8 @@ MonoBehaviour:
     dialogueText: "1. First you must go to the supply closet\r\nFind the exit to
       the entry room that is directly across from the building entrance\r\nThen,
       once exiting, walk forward until you reach the far door\r\nOpen the door and
-      enter the closet\r\n2. Turn right (away from wrench) and pick up a folder from
-      the pile\r\n3. With folder selected interacted with the GREEN paint and make
-      a green folder\r"
+      enter the closet\r\n2. Turn right and pick up a folder from the pile\r\n3.
+      With folder selected interacted with the GREEN paint and make a green folder\r"
     duration: 0
     triggerOnlyOnce: 1
     onTaskActivation: 0
@@ -3678,7 +3677,7 @@ MonoBehaviour:
       forward\r\nOnce entering the far room turn left and walk down the wall\r\nGo
       to the copier and copy the Report!\r\nDeliver copied reports to Quality control
       desk\r"
-    duration: 5
+    duration: 0
     triggerOnlyOnce: 1
     onTaskActivation: 0
     activationTaskId: 
@@ -3689,6 +3688,58 @@ MonoBehaviour:
     completionTaskId: 
     timedFollowUp: 1
     afterPopupId: R-0
+    followUpDelay: 3
+    onVendorEvent: 0
+  - id: F-0
+    dialogueText: "Oh my! It appears your predecessor was engaged in fraud on behalf
+      of the company! Well, we can\u2019t let that come back to bite us, so you are
+      going to have to dispose of that. "
+    duration: 5
+    triggerOnlyOnce: 1
+    onTaskActivation: 1
+    activationTaskId: 1_Fraud
+    requireActiveTask: 0
+    activeTaskId: 
+    onTriggerHit: 0
+    onTaskCompletion: 0
+    completionTaskId: 
+    timedFollowUp: 0
+    afterPopupId: 
+    followUpDelay: 3
+    onVendorEvent: 0
+  - id: F-1
+    dialogueText: "Return to the copying machine\r\nThe shredder is next to it, to
+      the right of it when facing the copying machine and the wall\r\nUse the Shredder
+      and DESTROY the compromising document\r"
+    duration: 0
+    triggerOnlyOnce: 1
+    onTaskActivation: 0
+    activationTaskId: 
+    requireActiveTask: 0
+    activeTaskId: 
+    onTriggerHit: 0
+    onTaskCompletion: 0
+    completionTaskId: 
+    timedFollowUp: 0
+    afterPopupId: 
+    followUpDelay: 3
+    onVendorEvent: 0
+  - id: El-0
+    dialogueText: 'Well well well, it appears you have performed above and beyond
+      expected metrics. You are being given a promotion. Here, take the Senior Member
+      Acess Key and go to the elevator next to the Supply Closet. You are now assigned
+      to the second floor. '
+    duration: 0
+    triggerOnlyOnce: 1
+    onTaskActivation: 1
+    activationTaskId: 1_Promote
+    requireActiveTask: 0
+    activeTaskId: 
+    onTriggerHit: 0
+    onTaskCompletion: 0
+    completionTaskId: 
+    timedFollowUp: 0
+    afterPopupId: 
     followUpDelay: 3
     onVendorEvent: 0
 --- !u!114 &157035691
@@ -16817,8 +16868,8 @@ PrefabInstance:
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
       propertyPath: responses.Array.data[0].responseText
-      value: 'Thank you for these reports. On a completely different note, please
-        take these different reports and get rid of them. '
+      value: Thank you for these reports. On a completely different note, here are
+        the 'documents'.
       objectReference: {fileID: 0}
     - target: {fileID: 2280563708675406233, guid: 402ab2876429bc04283c5cd25d07b315,
         type: 3}
@@ -21373,10 +21424,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2426254149739252365, guid: 20303a9abe6774bf5a28765bbc0d0244,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 779547864}
-    - targetCorrespondingSourceObject: {fileID: 2426254149739252365, guid: 20303a9abe6774bf5a28765bbc0d0244,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 779547863}
   m_SourcePrefab: {fileID: 100100000, guid: 20303a9abe6774bf5a28765bbc0d0244, type: 3}
 --- !u!4 &779547861 stripped
@@ -21412,20 +21459,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.002794002, y: 0.005184401, z: 0.001620011}
   m_Center: {x: 0.0000000018626451, y: 0.000000037252903, z: -0.000000009313226}
---- !u!114 &779547864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779547862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e76f41fc138c9a40a609be40dea0db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupToSpawn: {fileID: 5187849310243045036, guid: d8cbf7a55802a454cae9bcb9a4ac96a3,
-    type: 3}
 --- !u!114 &779547865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26535,6 +26568,7 @@ Transform:
   - {fileID: 1452731586}
   - {fileID: 1283152206}
   - {fileID: 90999422}
+  - {fileID: 1690848668}
   m_Father: {fileID: 1194488452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946125093
@@ -32160,6 +32194,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 19.72
       objectReference: {fileID: 0}
+    - target: {fileID: 6846691690647745016, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.8655171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846691690647745016, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.43275857
+      objectReference: {fileID: 0}
     - target: {fileID: 6959373149448073769, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: responseText
@@ -32481,6 +32525,8 @@ PrefabInstance:
     - {fileID: 2024423073530659220, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
     - {fileID: 9126768054059228985, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
     - {fileID: 8357143107136420678, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
+    - {fileID: 2048449520212498385, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
+    - {fileID: 7872046268082184697, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7256667802472783692, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
     - {fileID: 6969820704565029800, guid: 53bd3a06bc6a4f947a62149ecf76c3dd, type: 3}
@@ -42318,8 +42364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -279}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 30, y: -279}
+  m_SizeDelta: {x: 506.054, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472941388
 MonoBehaviour:
@@ -42375,7 +42421,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -49084,6 +49130,146 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4a7541feac78418eaa05c98b53c67f0, type: 3}
+--- !u!1001 &1690848667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 942807127}
+    m_Modifications:
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.776
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033827674962452319, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      propertyPath: m_Name
+      value: Match Box (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9033827674962452319, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1690848671}
+    - targetCorrespondingSourceObject: {fileID: 9033827674962452319, guid: c231bb162af80244885ee307c61ce79f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1690848670}
+  m_SourcePrefab: {fileID: 100100000, guid: c231bb162af80244885ee307c61ce79f, type: 3}
+--- !u!4 &1690848668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3407029956338767127, guid: c231bb162af80244885ee307c61ce79f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690848667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1690848669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9033827674962452319, guid: c231bb162af80244885ee307c61ce79f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690848667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1690848670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690848669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d1ac19e8b720f4899c2027895b08f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localDescriptionText: Burn Paper
+  responseText: {fileID: 1472941388}
+  displayDuration: 2
+  fadeDuration: 1
+  alternateWrongActive: 0
+  responses:
+  - responseType: 0
+    requiredItemObject: {fileID: 3380303278752109696, guid: fff49a5ad019a0b4c9587c650defc78e,
+      type: 3}
+    responseText: The papers are burnt.
+    action: 1
+    replacementItem: {fileID: 50714722630524047, guid: 3b483fa78b9a7654b8bd1e1f79e21204,
+      type: 3}
+    completeQuestTask: 1
+    questTaskID: 1_Fraud
+    onSuccess:
+      m_PersistentCalls:
+        m_Calls: []
+    onlyOnce: 0
+--- !u!65 &1690848671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690848669}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1695452431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3451147857856890920, guid: 32beb27516cb702438a104d2314d20de,
