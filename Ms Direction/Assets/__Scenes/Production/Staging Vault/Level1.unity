@@ -1544,6 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 0}
   localDescriptionText: Wrench
   inventoryItem: {fileID: 7772048399446882389, guid: 22aaff58a6b1d0843813d13a6089683b,
     type: 3}
@@ -7830,6 +7831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+    type: 3}
   localDescriptionText: Wrench
   inventoryItem: {fileID: 7772048399446882389, guid: 22aaff58a6b1d0843813d13a6089683b,
     type: 3}
@@ -13167,6 +13170,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
+    - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
+        type: 3}
       propertyPath: localDescriptionText
       value: Blue Folder
       objectReference: {fileID: 0}
@@ -16196,6 +16205,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8926484217977325377, guid: 0dc130cd679d2df40a0bad66db23618d,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17399,6 +17414,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5294034466392181885, guid: e92ef3bac7cc5754a9903632d3c0f33d,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 7019256085924417799, guid: e92ef3bac7cc5754a9903632d3c0f33d,
         type: 3}
       propertyPath: m_Name
@@ -18088,6 +18109,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
       propertyPath: localDescriptionText
@@ -21831,6 +21858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+    type: 3}
   localDescriptionText: 
   inventoryItem: {fileID: 0}
 --- !u!64 &783423799
@@ -22009,6 +22038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+    type: 3}
   localDescriptionText: Screwdriver
   inventoryItem: {fileID: 2364980462266396373, guid: f27b5294681cb914c8600d524f483d83,
     type: 3}
@@ -22227,6 +22258,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Folder_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 938527885000841528, guid: 5e98df386ecc16c4e922cc655688708c,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 8845031267904029763, guid: 5e98df386ecc16c4e922cc655688708c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -27195,6 +27232,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 6841912726842004846, guid: c1b87791132ef7c43b8e9027a254cb66,
         type: 3}
       propertyPath: localDescriptionText
@@ -32203,6 +32246,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: F1QImp
       objectReference: {fileID: 0}
+    - target: {fileID: 447199279304006912, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 1621558743300216827, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_Height
@@ -32283,6 +32332,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 18.16
       objectReference: {fileID: 0}
+    - target: {fileID: 2189606191172235606, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 2341814373575934405, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32383,6 +32438,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -89.972
       objectReference: {fileID: 0}
+    - target: {fileID: 4379247858749476752, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 5033500302240506302, guid: 53bd3a06bc6a4f947a62149ecf76c3dd,
         type: 3}
       propertyPath: m_Size.x
@@ -35813,6 +35874,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
         type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
+    - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
+        type: 3}
       propertyPath: localDescriptionText
       value: Mug
       objectReference: {fileID: 0}
@@ -36136,6 +36203,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mug
       objectReference: {fileID: 0}
+    - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
         type: 3}
       propertyPath: localDescriptionText
@@ -46436,6 +46509,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow Folder
       objectReference: {fileID: 0}
+    - target: {fileID: 9192085371296031261, guid: b0e60c86b005f944ab192c4d89b023f2,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56666,6 +56745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306ec3a3be9a654c8a6f2bc418d7036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+    type: 3}
   localDescriptionText: Paper
   inventoryItem: {fileID: 89191416577686334, guid: a95abf8dcebbd7540876237130299573,
     type: 3}
@@ -57561,6 +57642,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mug (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
+        type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 4650692297918825739, guid: d7e2689b0fffd0445a4a2b9d829dd6cd,
+        type: 3}
     - target: {fileID: 8402071067084818351, guid: e352bbe10ee1907458cc00228b2be4ea,
         type: 3}
       propertyPath: localDescriptionText

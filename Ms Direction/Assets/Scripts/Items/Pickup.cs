@@ -26,7 +26,7 @@ public class Pickup : MonoBehaviour, I_Interactable
 
             if (pickupEffect == null)
             {
-                Debug.Log("No step sound effect applied!");
+                Debug.Log("No pickup sound effect applied!");
             }
             else
             {
